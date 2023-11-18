@@ -1,10 +1,3 @@
-//
-//  WatchListUITestsLaunchTests.swift
-//  WatchListUITests
-//
-//  Created by Robert Alec Hovey on 11/18/23.
-//
-
 import XCTest
 
 final class WatchListUITestsLaunchTests: XCTestCase {
