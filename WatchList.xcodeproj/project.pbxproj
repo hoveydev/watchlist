@@ -216,7 +216,6 @@
 			);
 			mainGroup = 331686F52B08EE1B0067F374;
 			packageReferences = (
-				3300CA3F2B0917500085C026 /* XCRemoteSwiftPackageReference "watchlist" */,
 			);
 			productRefGroup = 331686FF2B08EE1B0067F374 /* Products */;
 			projectDirPath = "";
@@ -591,17 +590,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3300CA3F2B0917500085C026 /* XCRemoteSwiftPackageReference "watchlist" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hoveydev/watchlist";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 331686F62B08EE1B0067F374 /* Project object */;
 }
