@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  WatchList
-//
-//  Created by Robert Alec Hovey on 11/18/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {

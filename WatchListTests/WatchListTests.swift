@@ -1,10 +1,3 @@
-//
-//  WatchListTests.swift
-//  WatchListTests
-//
-//  Created by Robert Alec Hovey on 11/18/23.
-//
-
 import XCTest
 @testable import WatchList
 
