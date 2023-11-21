@@ -25,6 +25,6 @@ struct WListTextView: View {
     }
 }
 
-#Preview {
-    WListTextView()
-}
+//#Preview {
+//    WListTextView()
+//}
