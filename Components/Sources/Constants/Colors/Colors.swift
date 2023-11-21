@@ -8,7 +8,7 @@ enum Colors {
     var value: UIColor {
         switch self {
         case .wListPrimary:
-            return UIColor(.red)
+            return UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0)
         case .wListSecondary:
             return UIColor(.gray)
         case .wListTertiary:

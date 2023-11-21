@@ -12,6 +12,10 @@ public extension Font {
         return customFont(.large, weight: .regular)
     }
     
+    static var wListNavTitle: Font {
+        return customFont(.small, weight: .regular)
+    }
+    
     static var wListSubtitle: Font {
         return customFont(.medium, weight: .light)
     }
