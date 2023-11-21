@@ -16,9 +16,7 @@ jobs:
 
     steps:
     - name: Setup swift
-      uses: actions/setup-swift@v2
-      with:
-        swift-version: 5.7
+      uses: actions/checkout@v3
     - name: Clean build
       run: rm -rf .build
     - name: Build
