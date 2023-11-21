@@ -25,6 +25,6 @@ let package = Package(
         .testTarget(
             name: "WatchListTests",
             dependencies: [.target(name: "WatchList")],
-            path: "WatchList"),
+            path: "WatchList/UnitTests"),
     ]
 )
