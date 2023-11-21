@@ -1,11 +1,26 @@
 import SwiftUI
+import Components
 
 struct ComponentContentView: View {
     var body: some View {
-        VStack {
-            WListText("Sample view from Components")
+        HStack {
+            VStack(alignment: .leading) {
+                WListText("WatchList Title")
+                    .font(.wListTitle)
+                    .foregroundStyle(.wListPrimary)
+                WListText("Watchlist subtitle")
+                    .font(.wListSubtitle)
+                    .foregroundStyle(.wListSecondary)
+                    .padding(.bottom)
+                WListText("This is the body text for this particular view. Here is an example of how text will look if it's pretty long compared to the title and subtitle")
+                    .font(.wListBody)
+                    .foregroundStyle(.wListTertiary)
+            }
+            .padding()
+            Spacer()
         }
         .padding()
+        Spacer()
     }
 }
 

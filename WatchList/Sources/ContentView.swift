@@ -4,7 +4,7 @@ import Components
 struct ContentView: View {
     var body: some View {
         VStack {
-            WListText("Hello World!").font(.wListSmall)
+            WListText("Hello World!").font(.wListTitle)
         }
         .padding()
     }
