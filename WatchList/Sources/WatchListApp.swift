@@ -25,3 +25,7 @@ struct AppStart: View {
         ) : AnyView(ContentView())
     }
 }
+
+#Preview {
+    AppStart()
+}
