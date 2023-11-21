@@ -24,7 +24,7 @@ let package = Package(
             path: "WatchList/Sources"),
         .testTarget(
             name: "WatchListTests",
-            dependencies: [],
+            dependencies: ["WatchList"],
             path: "WatchList/UnitTests"
         ),
     ]
