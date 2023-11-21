@@ -23,8 +23,9 @@ let package = Package(
             dependencies: [.target(name: "Components")],
             path: "WatchList/Sources"),
         .testTarget(
-            name: "WatchListTests",
-            dependencies: [.target(name: "WatchList")],
-            path: "WatchList/UnitTests"),
+            name: "WatchListPackageTests",
+            dependencies: [],
+            path: "WatchList/UnitTests"
+        ),
     ]
 )
