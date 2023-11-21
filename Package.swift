@@ -23,7 +23,7 @@ let package = Package(
             dependencies: [.target(name: "Components")],
             path: "WatchList/Sources"),
         .testTarget(
-            name: "WatchList",
+            name: "WatchListTests",
             dependencies: [],
             path: "WatchList/UnitTests"
         ),
