@@ -29,4 +29,4 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_15.0.1.app && /usr/bin/xcodebuild -version
     - name: Run all tests
-      run: xcodebuild test -scheme WatchList -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1' | xcpretty
+      run: xcodebuild test -scheme WatchList -destination 'platform=iOS Simulator,OS=17.0.1,name=iPhone 15 Pro' | xcpretty
