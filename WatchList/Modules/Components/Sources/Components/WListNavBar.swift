@@ -7,7 +7,6 @@ struct WListNavBar: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: placement) {
                     HStack {

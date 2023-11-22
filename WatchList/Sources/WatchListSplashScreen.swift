@@ -27,6 +27,6 @@ struct WatchListSplashScreen: View {
     }
 }
 
-#Preview {
-    WatchListSplashScreen()
-}
+//#Preview {
+//    WatchListSplashScreen()
+//}

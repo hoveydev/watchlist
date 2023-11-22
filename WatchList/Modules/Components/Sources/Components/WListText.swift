@@ -11,7 +11,3 @@ public struct WListText: View {
         Text(text)
     }
 }
-
-#Preview {
-    WListText("Sample View from Components")
-}
