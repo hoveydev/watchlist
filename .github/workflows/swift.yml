@@ -18,6 +18,8 @@ jobs:
     - uses: maxim-lobanov/setup-xcode@v1
       with:
         xcode-version: '15.0.1'
+        username: ${{ secrets.APPLE_ID }}
+        password: ${{ secrets.APPLE_PASSWORD }}
     - name: Setup swift
       uses: actions/checkout@v3
     - name: Clean build
@@ -27,6 +29,8 @@ jobs:
     - name: Run tests
       run: swift test -v
     - name: Build for iOS
-      run: xcodebuild build -scheme WatchList -allowProvisioningUpdates
+      run: |
+        xcodebuild clean -project WatchList.xcodeproj
+        xcodebuild build -scheme WatchList -allowProvisioningUpdates
     - name: Run iOS tests
       run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme WatchList -destination "platform=iOS Simulator,OS=latest,name=iPhone 15 Pro" | xcpretty
