@@ -27,6 +27,6 @@ jobs:
     - name: Run tests
       run: swift test -v
     - name: Select Xcode
-      run: sudo xcode-select -switch /Applications/Xcode_15.0..1.app && /usr/bin/xcodebuild -version
+      run: sudo xcode-select -switch /Applications/Xcode_15.0.1.app && /usr/bin/xcodebuild -version
     - name: Run unit tests
       run: xcodebuild test -scheme WatchList -workspace WatchList.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0' | xcpretty
