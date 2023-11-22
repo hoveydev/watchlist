@@ -18,10 +18,18 @@ let package = Package(
             dependencies: [],
             path: "WatchList/Modules/Components/Sources"
         ),
+        .testTarget(
+            name: "ComponentsTests",
+            dependencies: [],
+            path: "WatchList/Modules/Components/UnitTests"
+        ),
         .executableTarget(
             name: "WatchList",
-            dependencies: [.target(name: "Components")],
-            path: "WatchList/Sources"),
+            dependencies: [
+                .target(name: "Components")
+            ],
+            path: "WatchList/Sources"
+        ),
         .testTarget(
             name: "WatchListTests",
             dependencies: ["WatchList"],
