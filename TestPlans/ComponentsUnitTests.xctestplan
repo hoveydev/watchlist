@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "F7C36934-82DC-467B-AF4E-27F062C13F3A",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Components.xcodeproj",
+        "identifier" : "33E2F0052B0B890800A4FA1D",
+        "name" : "ComponentsTests"
+      }
+    }
+  ],
+  "version" : 1
+}

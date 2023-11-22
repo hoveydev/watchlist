@@ -91,6 +91,9 @@
 		33A59AEB2B0E80BD00B1822D /* WatchList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = WatchList.xctestplan; path = TestPlans/WatchList.xctestplan; sourceTree = "<group>"; };
 		33A59AF02B0E81B400B1822D /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = UnitTests.xctestplan; path = TestPlans/UnitTests.xctestplan; sourceTree = "<group>"; };
 		33A59AF12B0E81E000B1822D /* UITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = UITests.xctestplan; path = TestPlans/UITests.xctestplan; sourceTree = "<group>"; };
+		33A59AF92B0E88B000B1822D /* Components.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Components.xctestplan; path = TestPlans/Components.xctestplan; sourceTree = "<group>"; };
+		33A59AFA2B0E8A0500B1822D /* ComponentsUnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = ComponentsUnitTests.xctestplan; path = TestPlans/ComponentsUnitTests.xctestplan; sourceTree = "<group>"; };
+		33A59AFB2B0E8A1800B1822D /* ComponentsUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = ComponentsUITests.xctestplan; path = TestPlans/ComponentsUITests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,11 +193,22 @@
 		33A59AF22B0E828600B1822D /* TestPlans */ = {
 			isa = PBXGroup;
 			children = (
-				33A59AF12B0E81E000B1822D /* UITests.xctestplan */,
-				33A59AF02B0E81B400B1822D /* UnitTests.xctestplan */,
 				33A59AEB2B0E80BD00B1822D /* WatchList.xctestplan */,
+				33A59AF02B0E81B400B1822D /* UnitTests.xctestplan */,
+				33A59AF12B0E81E000B1822D /* UITests.xctestplan */,
+				33A59AFC2B0E8A3C00B1822D /* Components */,
 			);
 			name = TestPlans;
+			sourceTree = "<group>";
+		};
+		33A59AFC2B0E8A3C00B1822D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				33A59AF92B0E88B000B1822D /* Components.xctestplan */,
+				33A59AFA2B0E8A0500B1822D /* ComponentsUnitTests.xctestplan */,
+				33A59AFB2B0E8A1800B1822D /* ComponentsUITests.xctestplan */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 		33E2F01F2B0B893600A4FA1D /* Modules */ = {
