@@ -60,6 +60,34 @@
 			remoteGlobalIDString = 33E2F02F2B0B8FE400A4FA1D;
 			remoteInfo = ComponentsUITests;
 		};
+		33EC84432B0FB78F00CC5088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 339C83AA2B0D3D6400DBA0CE /* Components.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 33E2EFFB2B0B890800A4FA1D;
+			remoteInfo = Components;
+		};
+		33EC84452B0FB78F00CC5088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 339C83AA2B0D3D6400DBA0CE /* Components.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 33E2F03B2B0B904200A4FA1D;
+			remoteInfo = ComponentsDemo;
+		};
+		33EC84472B0FB78F00CC5088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 339C83AA2B0D3D6400DBA0CE /* Components.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 33E2F0052B0B890800A4FA1D;
+			remoteInfo = ComponentsTests;
+		};
+		33EC84492B0FB78F00CC5088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 339C83AA2B0D3D6400DBA0CE /* Components.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 33E2F02E2B0B8FE400A4FA1D;
+			remoteInfo = ComponentsUITests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -259,6 +287,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				33EC84442B0FB78F00CC5088 /* PBXTargetDependency */,
+				33EC84462B0FB78F00CC5088 /* PBXTargetDependency */,
+				33EC84482B0FB78F00CC5088 /* PBXTargetDependency */,
+				33EC844A2B0FB78F00CC5088 /* PBXTargetDependency */,
 			);
 			name = WatchList;
 			productName = WatchList;
@@ -449,6 +481,26 @@
 			isa = PBXTargetDependency;
 			target = 331686FD2B08EE1B0067F374 /* WatchList */;
 			targetProxy = 331687192B08EE1C0067F374 /* PBXContainerItemProxy */;
+		};
+		33EC84442B0FB78F00CC5088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Components;
+			targetProxy = 33EC84432B0FB78F00CC5088 /* PBXContainerItemProxy */;
+		};
+		33EC84462B0FB78F00CC5088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ComponentsDemo;
+			targetProxy = 33EC84452B0FB78F00CC5088 /* PBXContainerItemProxy */;
+		};
+		33EC84482B0FB78F00CC5088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ComponentsTests;
+			targetProxy = 33EC84472B0FB78F00CC5088 /* PBXContainerItemProxy */;
+		};
+		33EC844A2B0FB78F00CC5088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ComponentsUITests;
+			targetProxy = 33EC84492B0FB78F00CC5088 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
