@@ -15,7 +15,6 @@
 		3316871D2B08EE1C0067F374 /* WatchListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3316871C2B08EE1C0067F374 /* WatchListUITests.swift */; };
 		3316871F2B08EE1C0067F374 /* WatchListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3316871E2B08EE1C0067F374 /* WatchListUITestsLaunchTests.swift */; };
 		3343F2402B092F310022F573 /* WatchListSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343F23F2B092F310022F573 /* WatchListSplashScreen.swift */; };
-		33EC84402B0FAA2800CC5088 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +60,13 @@
 			remoteGlobalIDString = 33E2F02F2B0B8FE400A4FA1D;
 			remoteInfo = ComponentsUITests;
 		};
+		33EC84412B0FB1FE00CC5088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 339C83AA2B0D3D6400DBA0CE /* Components.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 33E2EFFB2B0B890800A4FA1D;
+			remoteInfo = Components;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -102,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33EC84402B0FAA2800CC5088 /* Components.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +266,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				33EC84422B0FB1FE00CC5088 /* PBXTargetDependency */,
 			);
 			name = WatchList;
 			productName = WatchList;
@@ -451,6 +457,11 @@
 			isa = PBXTargetDependency;
 			target = 331686FD2B08EE1B0067F374 /* WatchList */;
 			targetProxy = 331687192B08EE1C0067F374 /* PBXContainerItemProxy */;
+		};
+		33EC84422B0FB1FE00CC5088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Components;
+			targetProxy = 33EC84412B0FB1FE00CC5088 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
