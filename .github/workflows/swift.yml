@@ -27,4 +27,4 @@ jobs:
     - name: Run unit tests
       run: swift test -v
     - name: Run UI Tests
-      run: xcodebuild -verbose -scheme WatchList -project WatchList.xcodeproj -configuration Debug -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" build test -allowProvisioningUpdates -timeout 1200
+      run: xcodebuild -verbose -scheme WatchList -project WatchList.xcodeproj -configuration Debug -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" build test -allowProvisioningUpdates
