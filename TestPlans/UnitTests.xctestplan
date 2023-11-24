@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "82CA0247-F308-4859-813D-E63191F5E89B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
+        "identifier" : "33E2F0052B0B890800A4FA1D",
+        "name" : "ComponentsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:WatchList.xcodeproj",
+        "identifier" : "3316870D2B08EE1C0067F374",
+        "name" : "WatchListTests"
+      }
+    }
+  ],
+  "version" : 1
+}
