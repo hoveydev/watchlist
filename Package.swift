@@ -23,6 +23,11 @@ let package = Package(
             dependencies: [],
             path: "WatchList/Modules/Components/UnitTests"
         ),
+        .testTarget(
+            name: "ComponentsUITests",
+            dependencies: [],
+            path: "WatchList/Modules/Components/UITests"
+        ),
         .executableTarget(
             name: "WatchList",
             dependencies: [
