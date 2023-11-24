@@ -14,10 +14,6 @@
 		331687132B08EE1C0067F374 /* WatchListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331687122B08EE1C0067F374 /* WatchListTests.swift */; };
 		3316871D2B08EE1C0067F374 /* WatchListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3316871C2B08EE1C0067F374 /* WatchListUITests.swift */; };
 		3316871F2B08EE1C0067F374 /* WatchListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3316871E2B08EE1C0067F374 /* WatchListUITestsLaunchTests.swift */; };
-		33432A702B0FC0BF00FBB60A /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; };
-		33432A712B0FC0BF00FBB60A /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		33432A732B0FC0C400FBB60A /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; };
-		33432A742B0FC0C400FBB60A /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3343F2402B092F310022F573 /* WatchListSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343F23F2B092F310022F573 /* WatchListSplashScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,28 +91,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		33432A722B0FC0BF00FBB60A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				33432A712B0FC0BF00FBB60A /* Components.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		33432A752B0FC0C400FBB60A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				33432A742B0FC0C400FBB60A /* Components.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		339C83A92B0D3C3300DBA0CE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,7 +136,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33432A702B0FC0BF00FBB60A /* Components.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +143,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33432A732B0FC0C400FBB60A /* Components.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +304,6 @@
 				3316870A2B08EE1C0067F374 /* Sources */,
 				3316870B2B08EE1C0067F374 /* Frameworks */,
 				3316870C2B08EE1C0067F374 /* Resources */,
-				33432A722B0FC0BF00FBB60A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -351,7 +322,6 @@
 				331687142B08EE1C0067F374 /* Sources */,
 				331687152B08EE1C0067F374 /* Frameworks */,
 				331687162B08EE1C0067F374 /* Resources */,
-				33432A752B0FC0C400FBB60A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -715,7 +685,6 @@
 		331687262B08EE1C0067F374 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -735,7 +704,6 @@
 		331687272B08EE1C0067F374 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -755,7 +723,6 @@
 		331687292B08EE1C0067F374 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -775,7 +742,6 @@
 		3316872A2B08EE1C0067F374 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
