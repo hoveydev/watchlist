@@ -23,11 +23,6 @@ let package = Package(
             dependencies: [],
             path: "WatchList/Modules/Components/UnitTests"
         ),
-        .testTarget(
-            name: "ComponentsUITests",
-            dependencies: [],
-            path: "WatchList/Modules/Components/UITests"
-        ),
         .executableTarget(
             name: "WatchList",
             dependencies: [
@@ -40,5 +35,21 @@ let package = Package(
             dependencies: ["WatchList"],
             path: "WatchList/UnitTests"
         ),
+        .testTarget(
+            name: "UITests",
+            dependencies: [],
+            path: "WatchList",
+            sources: ["UITests"],
+            cSettings: [
+                .headerSearchPath("WatchList/WatchList.xcodeproj"),
+            ],
+            swiftSettings: [
+                .define("UITEST", .when(platforms: [.macOS])),
+            ],
+            linkerSettings: [
+                .linkedFramework("XCTest"),
+                .linkedLibrary("swiftXCTest"),
+            ]
+        )
     ]
 )
