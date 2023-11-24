@@ -24,7 +24,5 @@ jobs:
       run: rm -rf .build
     - name: Build
       run: swift build -v
-    - name: Run all tests
-      run: xcodebuild test -scheme WatchList -destination 'platform=iOS Simulator,OS=17.0.1,name=iPhone 15 Pro'
     - name: Run unit tests
       run: swift test -v

@@ -48,7 +48,6 @@ let package = Package(
             ],
             linkerSettings: [
                 .linkedFramework("XCTest"),
-                .linkedLibrary("swiftXCTest"),
             ]
         )
     ]
