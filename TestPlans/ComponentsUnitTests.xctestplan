@@ -13,6 +13,7 @@
   },
   "testTargets" : [
     {
+      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
         "identifier" : "33E2F0052B0B890800A4FA1D",
