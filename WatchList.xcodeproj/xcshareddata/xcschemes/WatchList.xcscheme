@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33E2F03B2B0B904200A4FA1D"
-               BuildableName = "ComponentsDemo.app"
-               BlueprintName = "ComponentsDemo"
-               ReferencedContainer = "container:Components.xcodeproj">
+               BlueprintIdentifier = "331686FD2B08EE1B0067F374"
+               BuildableName = "WatchList.app"
+               BlueprintName = "WatchList"
+               ReferencedContainer = "container:WatchList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,14 +29,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:../../../TestPlans/Components.xctestplan"
+            reference = "container:TestPlans/WatchList.xctestplan"
             default = "YES">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:../../../TestPlans/ComponentsUnitTests.xctestplan">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:../../../TestPlans/ComponentsUITests.xctestplan">
          </TestPlanReference>
       </TestPlans>
    </TestAction>
@@ -54,10 +48,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33E2F03B2B0B904200A4FA1D"
-            BuildableName = "ComponentsDemo.app"
-            BlueprintName = "ComponentsDemo"
-            ReferencedContainer = "container:Components.xcodeproj">
+            BlueprintIdentifier = "331686FD2B08EE1B0067F374"
+            BuildableName = "WatchList.app"
+            BlueprintName = "WatchList"
+            ReferencedContainer = "container:WatchList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -71,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33E2F03B2B0B904200A4FA1D"
-            BuildableName = "ComponentsDemo.app"
-            BlueprintName = "ComponentsDemo"
-            ReferencedContainer = "container:Components.xcodeproj">
+            BlueprintIdentifier = "331686FD2B08EE1B0067F374"
+            BuildableName = "WatchList.app"
+            BlueprintName = "WatchList"
+            ReferencedContainer = "container:WatchList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

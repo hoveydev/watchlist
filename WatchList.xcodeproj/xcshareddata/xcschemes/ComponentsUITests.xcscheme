@@ -21,7 +21,7 @@
                BlueprintIdentifier = "33E2F02E2B0B8FE400A4FA1D"
                BuildableName = "ComponentsUITests.xctest"
                BlueprintName = "ComponentsUITests"
-               ReferencedContainer = "container:Components.xcodeproj">
+               ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
