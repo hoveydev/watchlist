@@ -14,7 +14,7 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:Components.xcodeproj",
+        "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
         "identifier" : "33E2F02E2B0B8FE400A4FA1D",
         "name" : "ComponentsUITests"
       }
