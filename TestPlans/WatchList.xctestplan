@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "2DB9317D-9C31-46C4-A273-2E704BECCBAA",
+      "id" : "932DD847-C76E-406C-A225-E81845F5F564",
       "name" : "Test Scheme Action",
       "options" : {
 
@@ -19,22 +19,6 @@
     {
       "parallelizable" : true,
       "target" : {
-        "containerPath" : "container:WatchList.xcodeproj",
-        "identifier" : "3316870D2B08EE1C0067F374",
-        "name" : "WatchListTests"
-      }
-    },
-    {
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:WatchList.xcodeproj",
-        "identifier" : "331687172B08EE1C0067F374",
-        "name" : "WatchListUITests"
-      }
-    },
-    {
-      "parallelizable" : true,
-      "target" : {
         "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
         "identifier" : "33E2F0052B0B890800A4FA1D",
         "name" : "ComponentsTests"
@@ -46,6 +30,22 @@
         "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
         "identifier" : "33E2F02E2B0B8FE400A4FA1D",
         "name" : "ComponentsUITests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:WatchList.xcodeproj",
+        "identifier" : "3316870D2B08EE1C0067F374",
+        "name" : "WatchListTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:WatchList.xcodeproj",
+        "identifier" : "331687172B08EE1C0067F374",
+        "name" : "WatchListUITests"
       }
     }
   ],
