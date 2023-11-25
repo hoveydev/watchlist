@@ -14,13 +14,6 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
-        "identifier" : "33E2F02E2B0B8FE400A4FA1D",
-        "name" : "ComponentsUITests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:WatchList.xcodeproj",
         "identifier" : "331687172B08EE1C0067F374",
         "name" : "WatchListUITests"

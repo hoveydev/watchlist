@@ -1,5 +1,4 @@
 import SwiftUI
-import Components
 
 struct WatchListSplashScreen: View {
     @State private var size: Double = 0.8
@@ -12,7 +11,7 @@ struct WatchListSplashScreen: View {
                     .font(.system(size: 80))
                     .foregroundColor(.blue)
                 Text("Watch List")
-                    .font(.wListTitle)
+                    .font(.callout)
                     .foregroundColor(.black.opacity(0.8))
             }
             .scaleEffect(size)

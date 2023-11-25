@@ -1,10 +1,9 @@
 import SwiftUI
-import Components
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            WListText("Hello World!").font(.wListTitle)
+            Text("Hello World!").font(.title)
         }
         .padding()
     }
