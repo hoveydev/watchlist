@@ -1,15 +1,24 @@
 {
   "configurations" : [
     {
-      "id" : "C330127C-2010-4FD3-AA01-D4B93B2F4F5C",
-      "name" : "Test Scheme Action",
+      "id" : "3983DB89-D577-4322-A2B4-7B840B361987",
+      "name" : "Configuration 1",
       "options" : {
 
       }
     }
   ],
   "defaultOptions" : {
-
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
+          "identifier" : "33E2EFFB2B0B890800A4FA1D",
+          "name" : "Components"
+        }
+      ]
+    },
+    "testTimeoutsEnabled" : true
   },
   "testTargets" : [
     {
@@ -18,14 +27,6 @@
         "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
         "identifier" : "33E2F0052B0B890800A4FA1D",
         "name" : "ComponentsTests"
-      }
-    },
-    {
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
-        "identifier" : "33E2F02E2B0B8FE400A4FA1D",
-        "name" : "ComponentsUITests"
       }
     }
   ],

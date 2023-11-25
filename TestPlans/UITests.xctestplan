@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "31289026-BF88-4292-BCA8-965B165AA9D9",
+      "id" : "F16961EB-67E9-445E-9A04-31890CDA58F9",
       "name" : "Configuration 1",
       "options" : {
 
@@ -9,11 +9,24 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:WatchList.xcodeproj",
+          "identifier" : "331686FD2B08EE1B0067F374",
+          "name" : "WatchList"
+        },
+        {
+          "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
+          "identifier" : "33E2EFFB2B0B890800A4FA1D",
+          "name" : "Components"
+        }
+      ]
+    },
     "testTimeoutsEnabled" : true
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
         "identifier" : "33E2F02E2B0B8FE400A4FA1D",
@@ -21,7 +34,6 @@
       }
     },
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:WatchList.xcodeproj",
         "identifier" : "331687172B08EE1C0067F374",

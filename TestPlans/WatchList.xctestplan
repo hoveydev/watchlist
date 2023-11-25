@@ -9,6 +9,20 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:WatchList.xcodeproj",
+          "identifier" : "331686FD2B08EE1B0067F374",
+          "name" : "WatchList"
+        },
+        {
+          "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
+          "identifier" : "33E2EFFB2B0B890800A4FA1D",
+          "name" : "Components"
+        }
+      ]
+    },
     "targetForVariableExpansion" : {
       "containerPath" : "container:WatchList.xcodeproj",
       "identifier" : "331686FD2B08EE1B0067F374",

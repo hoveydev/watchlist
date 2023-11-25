@@ -81,16 +81,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33E2F03B2B0B904200A4FA1D"
-            BuildableName = "ComponentsDemo.app"
-            BlueprintName = "ComponentsDemo"
-            ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -98,16 +88,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33E2F03B2B0B904200A4FA1D"
-            BuildableName = "ComponentsDemo.app"
-            BlueprintName = "ComponentsDemo"
+            BlueprintIdentifier = "33E2EFFB2B0B890800A4FA1D"
+            BuildableName = "Components.framework"
+            BlueprintName = "Components"
             ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
