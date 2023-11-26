@@ -14,10 +14,52 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "33E2F03B2B0B904200A4FA1D"
+               BuildableName = "ComponentsDemo.app"
+               BlueprintName = "ComponentsDemo"
+               ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "33E2EFFB2B0B890800A4FA1D"
                BuildableName = "Components.framework"
                BlueprintName = "Components"
-               ReferencedContainer = "container:Components.xcodeproj">
+               ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "33E2F0052B0B890800A4FA1D"
+               BuildableName = "ComponentsTests.xctest"
+               BlueprintName = "ComponentsTests"
+               ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "33E2F02E2B0B8FE400A4FA1D"
+               BuildableName = "ComponentsUITests.xctest"
+               BlueprintName = "ComponentsUITests"
+               ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,26 +68,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
-      <TestPlans>
-         <TestPlanReference
-            reference = "container:../../../TestPlans/Components.xctestplan"
-            default = "YES">
-         </TestPlanReference>
-      </TestPlans>
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33E2F0052B0B890800A4FA1D"
-               BuildableName = "ComponentsTests.xctest"
-               BlueprintName = "ComponentsTests"
-               ReferencedContainer = "container:Components.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -70,7 +94,7 @@
             BlueprintIdentifier = "33E2EFFB2B0B890800A4FA1D"
             BuildableName = "Components.framework"
             BlueprintName = "Components"
-            ReferencedContainer = "container:Components.xcodeproj">
+            ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

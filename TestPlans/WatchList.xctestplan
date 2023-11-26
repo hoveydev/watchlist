@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "2DB9317D-9C31-46C4-A273-2E704BECCBAA",
+      "id" : "932DD847-C76E-406C-A225-E81845F5F564",
       "name" : "Test Scheme Action",
       "options" : {
 
@@ -9,6 +9,20 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:WatchList.xcodeproj",
+          "identifier" : "331686FD2B08EE1B0067F374",
+          "name" : "WatchList"
+        },
+        {
+          "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
+          "identifier" : "33E2EFFB2B0B890800A4FA1D",
+          "name" : "Components"
+        }
+      ]
+    },
     "targetForVariableExpansion" : {
       "containerPath" : "container:WatchList.xcodeproj",
       "identifier" : "331686FD2B08EE1B0067F374",
@@ -16,6 +30,22 @@
     }
   },
   "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
+        "identifier" : "33E2F0052B0B890800A4FA1D",
+        "name" : "ComponentsTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
+        "identifier" : "33E2F02E2B0B8FE400A4FA1D",
+        "name" : "ComponentsUITests"
+      }
+    },
     {
       "parallelizable" : true,
       "target" : {
@@ -30,20 +60,6 @@
         "containerPath" : "container:WatchList.xcodeproj",
         "identifier" : "331687172B08EE1C0067F374",
         "name" : "WatchListUITests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
-        "identifier" : "33E2F0052B0B890800A4FA1D",
-        "name" : "ComponentsTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
-        "identifier" : "33E2F02E2B0B8FE400A4FA1D",
-        "name" : "ComponentsUITests"
       }
     }
   ],
