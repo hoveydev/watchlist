@@ -1,10 +1,3 @@
-//
-//  ComponentsUITestsLaunchTests.swift
-//  ComponentsUITests
-//
-//  Created by Robert Alec Hovey on 11/20/23.
-//
-
 import XCTest
 
 final class ComponentsUITestsLaunchTests: XCTestCase {
