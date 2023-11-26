@@ -37,7 +37,7 @@ CODE_COVERAGE=$(echo $CODE_COVERAGE*100.0 | bc)
 # pass run if coverage is above threshold / fail if not
 COVERAGE_PASSES=$(echo "$CODE_COVERAGE > $COVERAGE_THRESHOLD" | bc)
 if [ $COVERAGE_PASSES -eq 0 ]; then
-    printf "\033[0;31mCode coverage %.1f%% is less than required %.1f%%\033[0m\n" $CODE_COVERAGE "80"
+    printf "\033[0;31mCode coverage %.1f%% is less than required %.1f%%\033[0m\n" $CODE_COVERAGE
     exit -1
 else
     printf "\033[0;32mCode coverage is %.1f%%\033[0m\n" $CODE_COVERAGE
