@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# install jq
+echo "Installing JQ..."
+brew install jq
+
 RESULT_BUNDLE="CodeCoverage.xcresult"
 RESULT_JSON="CodeCoverage.json"
 
