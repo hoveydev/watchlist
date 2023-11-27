@@ -72,7 +72,7 @@ jobs:
     #   If the Autobuild fails above, remove it and uncomment the following three lines.
     #   modify them (or add more) to build your code if your project, please refer to the EXAMPLE below for guidance.
 
-    # - run: |
+    - run: |
         echo "Run, Build Application using command"
         set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme WatchList -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" -enableCodeCoverage YES | xcpretty
     #     ./location_of_script_within_repo/buildscript.sh
