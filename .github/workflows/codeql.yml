@@ -74,7 +74,7 @@ jobs:
 
     - run: |
         echo "Run, Build Application using command"
-        xcodebuild build-for-testing -scheme WatchList -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" -allowProvisioningUpdates
+        xcodebuild build-for-testing -scheme WatchList -allowProvisioningUpdates
     #     ./location_of_script_within_repo/buildscript.sh
 
     - name: Perform CodeQL Analysis
