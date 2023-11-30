@@ -31,6 +31,6 @@ struct AppStart: View {
                         self.isActive = true
                     }
                 }
-        ) : AnyView(ContentView())
+        ) : AnyView(ContentView().environmentObject(AppStore(initial: AppState(), reducer: appReducer)))
     }
 }

@@ -30,6 +30,10 @@
 		3367C49D2B166E44000869A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3367C49C2B166E44000869A7 /* GoogleService-Info.plist */; };
 		3367C49E2B166E44000869A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3367C49C2B166E44000869A7 /* GoogleService-Info.plist */; };
 		3367C49F2B166E44000869A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3367C49C2B166E44000869A7 /* GoogleService-Info.plist */; };
+		3367C4A52B16E10C000869A7 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367C4A42B16E10C000869A7 /* AppStore.swift */; };
+		3367C4A72B16E162000869A7 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367C4A62B16E162000869A7 /* AppReducer.swift */; };
+		3367C4A92B16E19F000869A7 /* AppActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367C4A82B16E19F000869A7 /* AppActions.swift */; };
+		3367C4AB2B17E7FC000869A7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367C4AA2B17E7FC000869A7 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +157,10 @@
 		3316871E2B08EE1C0067F374 /* WatchListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3343F23F2B092F310022F573 /* WatchListSplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListSplashScreen.swift; sourceTree = "<group>"; };
 		3367C49C2B166E44000869A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3367C4A42B16E10C000869A7 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		3367C4A62B16E162000869A7 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		3367C4A82B16E19F000869A7 /* AppActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppActions.swift; sourceTree = "<group>"; };
+		3367C4AA2B17E7FC000869A7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		33798F822B128C6000203C90 /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = UnitTests.xctestplan; path = TestPlans/UnitTests.xctestplan; sourceTree = "<group>"; };
 		33798F832B128CAF00203C90 /* UITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = UITests.xctestplan; path = TestPlans/UITests.xctestplan; sourceTree = "<group>"; };
 		33798F862B12909C00203C90 /* Components.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Components.xctestplan; path = TestPlans/Components.xctestplan; sourceTree = "<group>"; };
@@ -302,9 +310,13 @@
 		33E2F0242B0B8A9300A4FA1D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3367C4A42B16E10C000869A7 /* AppStore.swift */,
+				3367C4AA2B17E7FC000869A7 /* AppState.swift */,
+				3367C4A62B16E162000869A7 /* AppReducer.swift */,
+				3367C4A82B16E19F000869A7 /* AppActions.swift */,
 				331687012B08EE1B0067F374 /* WatchListApp.swift */,
-				331687032B08EE1B0067F374 /* ContentView.swift */,
 				3343F23F2B092F310022F573 /* WatchListSplashScreen.swift */,
+				331687032B08EE1B0067F374 /* ContentView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -508,8 +520,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				331687042B08EE1B0067F374 /* ContentView.swift in Sources */,
+				3367C4A92B16E19F000869A7 /* AppActions.swift in Sources */,
 				3343F2402B092F310022F573 /* WatchListSplashScreen.swift in Sources */,
 				331687022B08EE1B0067F374 /* WatchListApp.swift in Sources */,
+				3367C4A72B16E162000869A7 /* AppReducer.swift in Sources */,
+				3367C4AB2B17E7FC000869A7 /* AppState.swift in Sources */,
+				3367C4A52B16E10C000869A7 /* AppStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
