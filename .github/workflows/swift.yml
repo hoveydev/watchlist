@@ -26,8 +26,9 @@ jobs:
       run: sh ./Scripts/check-code-coverage.sh
       
   analyze:
-    name: Analyze
+  
     runs-on: ${{ (matrix.language == 'swift' && 'self-hosted') }}
+    
     timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
     permissions:
       actions: read
