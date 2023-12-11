@@ -18,12 +18,6 @@ pipeline {
             }
         }
 
-        stage('Dependencies') {
-            steps {
-                sh '/usr/local/bin/pod install'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mkdir -p build/reports'
