@@ -1,101 +1,140 @@
-main()
+#!/bin/sh
+#!groovy
 
-def main() {
-  timeout(time: 45, unit: 'MINUTES') {
-    try {
-      node( 'macos') {
-        setupProperties()
-        runPipeline()
-      }
-    } catch (err) {
-      currentBuild.result = 'FAILURE'
-      throw err
-    } finally {
-      postBuildActions()
+pipeline {
+    agent any
+
+    environment {
+        LANG = 'en_US.UTF-8'
+        LC_ALL = 'en_US.UTF-8'
+        PATH = "/usr/local/bin:$PATH"
     }
-  }
-}
 
-def setupProperties() {
-  // set the TERM env var so colors show up
-  env.TERM = 'xterm'
-  properties([
-    buildDiscarder(logRotator(daysToKeepStr: '30')),
-    disableConcurrentBuilds(),
-  ])
-}
-
-def runPipeline() {
-    githubNotify status: 'PENDING', context: 'Pipeline'
-    stage('Checkout') { checkout scm }
-    def step_defs = [
-      [name:'Prereqs',  command:'make ensure-prerequisites'],
-      [name:'Setup',    command:'make setup'],
-      [name:'Jenkinsfile',  command:'make test-jenkinsfile'],
-      [name:'Lint',     command:'make lint'],
-      [name:'Build',    command:'make build'],
-      [name:'Test',     command:'make test'],
-      [name:'E2E',      command:'make test-e2e'],
-    ]
-    step_defs.each { step_def ->
-      stage(step_def.name) {
-        step = makeStep(step_def)
-        step()
-      }
+    options {
+        skipDefaultCheckout(true)
     }
-    upload()
-}
 
-// returns a closure to be invoked
-def makeStep(step_def) {
-  return {
-    try {
-      githubNotify status: 'PENDING', context: step_def.name
-      sh step_def.command
-      githubNotify status: 'SUCCESS', context: step_def.name
-    } catch (err) {
-      githubNotify status: 'FAILURE', context: step_def.name
-      currentBuild.result = 'FAILURE'
-      throw err
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Dependencies') {
+            steps {
+                sh '/usr/local/bin/pod install'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mkdir -p build/reports'
+                sh 'xcodebuild build-for-testing -scheme WatchList -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1"'
+            }
+        }
+
+        stage('Test Suite') {
+            parallel {
+                stage('Unit Test: iPhone 6, iOS 10.3.1') {
+                    steps {
+                        sh 'echo "Unit Tests"'
+                        sh 'xcodebuild test-without-building -scheme WatchList -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit --output ./build/reports/junit-10.3.1.xml'
+                    }
+                }
+
+                stage('UI Automation') {
+                    steps {
+                        sh 'echo "UI Automation"'
+                    }
+                }
+            }
+            post {
+                always {
+                    junit testResults: '**/reports/junit-*.xml'
+                }
+            }
+        }
+
+        stage('Static analysis') {
+            steps {
+                parallel (
+                    "Swiftlint": {
+                        sh 'echo "SwiftLint"'
+                        sh './Pods/SwiftLint/swiftlint lint --reporter checkstyle > ./build/reports/swiftlint-report.xml'
+                        recordIssues enabledForFailure: true, tool: swiftLint(pattern: '**/build/reports/swiftlint-report.xml')
+                    },
+                    "IBLinter": {
+                        sh 'echo "IBLinter"'
+                    },
+                    "JSCPD": {
+                        sh 'echo "JSCPD"'
+                        sh '/usr/local/bin/jscpd --reporters xml --format "swift" -o ./build/reports/ .'
+                        recordIssues enabledForFailure: true, tool: cpd(pattern: '**/build/reports/jscpd-report.xml')
+                    }
+                )
+            }
+        }
+
+        stage('Documentation') {
+            when {
+                expression {
+                    env.BRANCH_NAME == 'develop'
+                }
+            }
+            steps {
+                // Generating docs
+                sh 'jazzy'
+                // Removing current version from web server
+                sh 'rm -rf /path/to/doc/ios'
+                // Copy new docs to web server
+                // sh 'cp -a docs/source/. /path/to/doc/ios'
+            }
+        }
     }
-  }
+
+    post {
+        //always {
+            // Cleanup
+            // sh 'rm -rf build'
+        //}
+        success {
+            notifyBuild()
+        }
+        failure {
+            notifyBuild('ERROR')
+        }
+    }
 }
 
-def postBuildActions() {
-  echo "Running post build actions"
-  try {
-    def currentResult = currentBuild.result ?: 'SUCCESS'
-    if (currentResult == 'FAILURE') {
-      githubNotify status: 'FAILURE', context: 'Pipeline'
+// Slack notification with status and code changes from git
+def notifyBuild(String buildStatus = 'SUCCESSFUL') {
+    buildStatus = buildStatus
+
+    def colorName = 'RED'
+    def colorCode = '#FF0000'
+    def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
+    def changeSet = getChangeSet()
+    def message = "${subject} \n ${changeSet}"
+
+    if (buildStatus == 'SUCCESSFUL') {
+        color = 'GREEN'
+        colorCode = '#00FF00'
     } else {
-      githubNotify status: 'SUCCESS', context: 'Pipeline'
+        color = 'RED'
+        colorCode = '#FF0000'
     }
-  } catch (err) {
-    githubNotify status: 'FAILURE', context: 'Pipeline'
-    throw err
-  } finally {
-    // deleteDir()
-  }
+
+    slackSend (color: colorCode, message: message)
 }
 
+@NonCPS
 
-def upload() {
-  stage('Upload') {
-    try {
-      githubNotify status: 'PENDING', context: "E2E"
-      sh 'make upload'
-      gitBranch = sh("scripts/get-git-branch.sh")
-      branch = sh("scripts/get-safe-branch.sh ${gitBranch}")
-      msg = "The reivew app is available at: \
-https://cool.repo/repository/maven-general-temp/\
-repository/maven-general-temp/com/tillful/app/till-native/\
-${branch}/till-native-${branch}.app"
-      pullRequest.comment(msg)
-    githubNotify status: 'SUCCESS', context: "Upload"
-    } catch (err) {
-      githubNotify status: 'FAILURE', context: "Upload"
-      currentBuild.result = 'FAILURE'
-      throw err
-    }
-  }
+// Fetching change set from Git
+def getChangeSet() {
+    return currentBuild.changeSets.collect { cs ->
+        cs.collect { entry ->
+            "* ${entry.author.fullName}: ${entry.msg}"
+        }.join("\n")
+    }.join("\n")
 }
