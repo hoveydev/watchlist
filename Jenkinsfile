@@ -30,7 +30,6 @@ env.GIT_COMMIT_MSG = sh(returnStdout: true, script: '''
 def DATE_TIME = sh(returnStdout: true, script: '''
                     date +%Y.%m.%d-%H:%M:%S
                     ''').trim()
-....
     }
    }
   }
@@ -38,13 +37,13 @@ stage('Unit Test cases') {
 }
 stage('Quality checks - Report') {
    parallel {
-    stage('Linting') { ... }
-    stage('Code Coverage') { ... }
+    stage('Linting')
+    stage('Code Coverage')
    }
-stage('Commit File changes') { ... }
-stage('Build') { ... }
-stage('Generating Artifacts') { ... }
-stage('Post Build -- Actions') { ... }
+stage('Commit File changes')
+stage('Build')
+stage('Generating Artifacts')
+stage('Post Build -- Actions')
 }
 post {
 success {
