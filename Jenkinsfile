@@ -26,17 +26,10 @@ pipeline {
         }
 
         stage('Test Suite') {
-            parallel {
-                stage('Unit Test: iPhone 15 Pro, iOS 17.0.1') {
+                stage('All Tests: iPhone 15 Pro, iOS 17.0.1') {
                     steps {
                         sh 'echo "Unit Tests"'
-                        sh 'xcodebuild test-without-building -scheme WatchList -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit --output ./build/reports/junit-17.0.1.xml'
-                    }
-                }
-
-                stage('UI Automation') {
-                    steps {
-                        sh 'echo "UI Automation"'
+                        sh '-o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme WatchList -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" -enableCodeCoverage YES -resultBundlePath CodeCoverage.xcresult | xcpretty'
                     }
                 }
             }
