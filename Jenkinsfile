@@ -33,10 +33,10 @@ pipeline {
                         sh '-o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme WatchList -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" -enableCodeCoverage YES -resultBundlePath CodeCoverage.xcresult | xcpretty'
                     }
                 }
-                post {
-                    always {
-                        junit testResults: '**/reports/junit-*.xml'
-                    }
+            }
+            post {
+                always {
+                    junit testResults: '**/reports/junit-*.xml'
                 }
             }
         }
