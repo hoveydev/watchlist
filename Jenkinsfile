@@ -1,6 +1,3 @@
-#!/bin/sh
-#!groovy
-
 pipeline {
     agent any
 
