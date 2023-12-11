@@ -36,7 +36,7 @@ pipeline {
             }
             post {
                 always {
-                    junit testResults: '**/reports/junit-*.xml'
+                    junit testResults: 'Users/rhovey/.jenkins/workspace/jenkins-test-ios_PR-19/CodeCoverage.xcresult'
                 }
             }
         }
