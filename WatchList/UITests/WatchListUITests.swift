@@ -17,7 +17,7 @@ final class WatchListUITests: XCTestCase {
         let splashText = app.staticTexts["Watch List"]
         XCTAssertTrue(splashText.exists)
         sleep(5) // waits for splash screen animation to finish
-        let landingText = app.staticTexts["This is a test"]
+        let landingText = app.staticTexts["This is a test FAIL"]
         XCTAssertTrue(landingText.exists)
         XCTAssertFalse(splashText.exists)
     }
