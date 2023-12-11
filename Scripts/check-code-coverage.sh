@@ -26,11 +26,6 @@ test_output=$(set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-
 XCODEBUILD_STATUS=$?
 if [ $XCODEBUILD_STATUS -ne 0 ]; then
     echo "Tests failed. xcodebuild exited with status $XCODEBUILD_STATUS."
-
-    # Extract and print the failed tests
-    failed_tests=$(echo "$test_output" | grep "Test Case" | grep "failed" | awk -F"\"" '{print $2}')
-    echo "Failed tests: $failed_tests"
-
     exit $XCODEBUILD_STATUS
 fi
 
