@@ -1,7 +1,5 @@
 pipeline {
 agent { label 'mac-mini-slave' }
-parameters {..}
-environment {...}
 stages {
 //<< Git SCM Checkout >>
   stage('Git Checkout') {
