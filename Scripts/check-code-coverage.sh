@@ -29,7 +29,7 @@ echo "Converting XCResult to JSON..."
 xcrun xccov view --report --json $RESULT_BUNDLE > $RESULT_JSON
 
 # set minimum code coverage threshold
-COVERAGE_THRESHOLD="75"
+COVERAGE_THRESHOLD="80"
 
 CODE_COVERAGE=$(cat $RESULT_JSON | jq '.lineCoverage')
 CODE_COVERAGE=$(echo $CODE_COVERAGE*100.0 | bc)
