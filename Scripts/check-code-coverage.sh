@@ -18,11 +18,16 @@ fi
 
 # build
 echo "Building the project..."
-set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme WatchList -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" -enableCodeCoverage YES | xcpretty
+build_output=$(set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme WatchList -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" -enableCodeCoverage YES | xcpretty)
 # test
 echo "Running tests..."
-set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme WatchList -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" -enableCodeCoverage YES -resultBundlePath $RESULT_BUNDLE | xcpretty
+test_output=$(set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme WatchList -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" -enableCodeCoverage YES -resultBundlePath $RESULT_BUNDLE | xcpretty)
 
+XCODEBUILD_STATUS=$?
+if [ $XCODEBUILD_STATUS -ne 0 ]; then
+    echo "Tests failed. xcodebuild exited with status $XCODEBUILD_STATUS."
+    exit $XCODEBUILD_STATUS
+fi
 
 # convert xcresult to json
 echo "Converting XCResult to JSON..."
