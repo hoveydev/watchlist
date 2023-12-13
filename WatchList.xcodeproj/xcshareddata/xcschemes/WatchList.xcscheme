@@ -41,6 +41,9 @@
          <TestPlanReference
             reference = "container:TestPlans/Components.xctestplan">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:TestPlans/Login.xctestplan">
+         </TestPlanReference>
       </TestPlans>
    </TestAction>
    <LaunchAction
