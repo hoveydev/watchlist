@@ -1,10 +1,3 @@
-//
-//  Login.h
-//  Login
-//
-//  Created by Robert Alec Hovey on 12/12/23.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for Login.

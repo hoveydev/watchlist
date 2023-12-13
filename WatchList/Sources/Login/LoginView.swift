@@ -2,7 +2,7 @@ import SwiftUI
 import Components
 import Firebase
 
-struct LoginView: View {
+struct OtherLoginView: View {
     @EnvironmentObject var store: AppStore
     @State private var email: String
     @State private var password: String

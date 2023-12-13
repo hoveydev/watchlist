@@ -38,6 +38,10 @@
 		3367C4A72B16E162000869A7 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367C4A62B16E162000869A7 /* AppReducer.swift */; };
 		3367C4A92B16E19F000869A7 /* AppActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367C4A82B16E19F000869A7 /* AppActions.swift */; };
 		3367C4AB2B17E7FC000869A7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367C4AA2B17E7FC000869A7 /* AppState.swift */; };
+		33712AE02B29E2F30034F29F /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; };
+		33712AE12B29E2F30034F29F /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33712AE22B29E2F30034F29F /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBAF2B292E4F005C1020 /* Login.framework */; };
+		33712AE32B29E2F30034F29F /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBAF2B292E4F005C1020 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		337894442B27F4A000B7EC7D /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894432B27F4A000B7EC7D /* LoginState.swift */; };
 		337894462B27FF3900B7EC7D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894452B27FF3900B7EC7D /* LoginView.swift */; };
 		337894482B288D4A00B7EC7D /* DashboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894472B288D4A00B7EC7D /* DashboardState.swift */; };
@@ -115,13 +119,6 @@
 			remoteGlobalIDString = 33E2F02F2B0B8FE400A4FA1D;
 			remoteInfo = ComponentsUITests;
 		};
-		33EC84432B0FB78F00CC5088 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 339C83AA2B0D3D6400DBA0CE /* Components.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 33E2EFFB2B0B890800A4FA1D;
-			remoteInfo = Components;
-		};
 		33EC84452B0FB78F00CC5088 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 339C83AA2B0D3D6400DBA0CE /* Components.xcodeproj */;
@@ -170,12 +167,14 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		339C83A92B0D3C3300DBA0CE /* Embed Frameworks */ = {
+		33712AE42B29E2F30034F29F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				33712AE32B29E2F30034F29F /* Login.framework in Embed Frameworks */,
+				33712AE12B29E2F30034F29F /* Components.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,12 +217,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3367C48F2B14BE1B000869A7 /* FirebaseAnalyticsSwift in Frameworks */,
+				33712AE02B29E2F30034F29F /* Components.framework in Frameworks */,
 				3367C49B2B14BE1B000869A7 /* FirebaseRemoteConfigSwift in Frameworks */,
 				3367C4932B14BE1B000869A7 /* FirebaseCrashlytics in Frameworks */,
 				3367C4912B14BE1B000869A7 /* FirebaseAuth in Frameworks */,
 				3367C4992B14BE1B000869A7 /* FirebaseRemoteConfig in Frameworks */,
 				3367C4952B14BE1B000869A7 /* FirebaseFirestore in Frameworks */,
 				3367C48D2B14BE1B000869A7 /* FirebaseAnalytics in Frameworks */,
+				33712AE22B29E2F30034F29F /* Login.framework in Frameworks */,
 				3367C4972B14BE1B000869A7 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +253,6 @@
 		331686F52B08EE1B0067F374 = {
 			isa = PBXGroup;
 			children = (
-				3339EBF42B29479E005C1020 /* Login.xctestplan */,
 				3367C49C2B166E44000869A7 /* GoogleService-Info.plist */,
 				331687002B08EE1B0067F374 /* WatchList */,
 				331686FF2B08EE1B0067F374 /* Products */,
@@ -320,10 +320,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3339EBF52B29510C005C1020 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				3367C4AA2B17E7FC000869A7 /* AppState.swift */,
+				337894432B27F4A000B7EC7D /* LoginState.swift */,
+				337894472B288D4A00B7EC7D /* DashboardState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		3339EBF92B295BE9005C1020 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3339EBF42B29479E005C1020 /* Login.xctestplan */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		3378944B2B2890A800B7EC7D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				337894432B27F4A000B7EC7D /* LoginState.swift */,
 				337894452B27FF3900B7EC7D /* LoginView.swift */,
 			);
 			path = Login;
@@ -347,6 +364,7 @@
 				33798F822B128C6000203C90 /* UnitTests.xctestplan */,
 				33798F832B128CAF00203C90 /* UITests.xctestplan */,
 				33A59AFC2B0E8A3C00B1822D /* Components */,
+				3339EBF92B295BE9005C1020 /* Login */,
 			);
 			name = TestPlans;
 			sourceTree = "<group>";
@@ -378,14 +396,13 @@
 		33E2F0242B0B8A9300A4FA1D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3378944B2B2890A800B7EC7D /* Login */,
-				3367C4A42B16E10C000869A7 /* AppStore.swift */,
-				3367C4AA2B17E7FC000869A7 /* AppState.swift */,
-				337894472B288D4A00B7EC7D /* DashboardState.swift */,
-				3367C4A62B16E162000869A7 /* AppReducer.swift */,
-				3367C4A82B16E19F000869A7 /* AppActions.swift */,
 				331687012B08EE1B0067F374 /* WatchListApp.swift */,
 				3343F23F2B092F310022F573 /* WatchListSplashScreen.swift */,
+				3367C4A42B16E10C000869A7 /* AppStore.swift */,
+				3339EBF52B29510C005C1020 /* State */,
+				3378944B2B2890A800B7EC7D /* Login */,
+				3367C4A62B16E162000869A7 /* AppReducer.swift */,
+				3367C4A82B16E19F000869A7 /* AppActions.swift */,
 				331687032B08EE1B0067F374 /* ContentView.swift */,
 				337894492B288D7900B7EC7D /* DashboardView.swift */,
 			);
@@ -410,12 +427,11 @@
 				331686FA2B08EE1B0067F374 /* Sources */,
 				331686FB2B08EE1B0067F374 /* Frameworks */,
 				331686FC2B08EE1B0067F374 /* Resources */,
-				339C83A92B0D3C3300DBA0CE /* Embed Frameworks */,
+				33712AE42B29E2F30034F29F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				33EC84442B0FB78F00CC5088 /* PBXTargetDependency */,
 				33EC84462B0FB78F00CC5088 /* PBXTargetDependency */,
 				33EC84482B0FB78F00CC5088 /* PBXTargetDependency */,
 				33EC844A2B0FB78F00CC5088 /* PBXTargetDependency */,
@@ -665,11 +681,6 @@
 			isa = PBXTargetDependency;
 			target = 331686FD2B08EE1B0067F374 /* WatchList */;
 			targetProxy = 331687192B08EE1C0067F374 /* PBXContainerItemProxy */;
-		};
-		33EC84442B0FB78F00CC5088 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Components;
-			targetProxy = 33EC84432B0FB78F00CC5088 /* PBXContainerItemProxy */;
 		};
 		33EC84462B0FB78F00CC5088 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
