@@ -17,6 +17,16 @@
 		3339EBC22B292FE5005C1020 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3339EBC12B292FE5005C1020 /* Preview Assets.xcassets */; };
 		3339EBCD2B293017005C1020 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339EBCC2B293017005C1020 /* LoginUITests.swift */; };
 		3339EBCF2B293017005C1020 /* LoginUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339EBCE2B293017005C1020 /* LoginUITestsLaunchTests.swift */; };
+		3339EBE02B293CEF005C1020 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EB8F2B292E4F005C1020 /* Login.framework */; };
+		3339EBE12B293CEF005C1020 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EB8F2B292E4F005C1020 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3339EBE52B293CFA005C1020 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EB8F2B292E4F005C1020 /* Login.framework */; };
+		3339EBE62B293CFA005C1020 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EB8F2B292E4F005C1020 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3339EBEB2B293D01005C1020 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBEA2B293D01005C1020 /* Components.framework */; };
+		3339EBEC2B293D01005C1020 /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBEA2B293D01005C1020 /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3339EBEE2B293D0E005C1020 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBED2B293D0E005C1020 /* Components.framework */; };
+		3339EBEF2B293D0E005C1020 /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBED2B293D0E005C1020 /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3339EBF22B293D13005C1020 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBF12B293D13005C1020 /* Components.framework */; };
+		3339EBF32B293D13005C1020 /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBF12B293D13005C1020 /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +44,59 @@
 			remoteGlobalIDString = 3339EBB72B292FE4005C1020;
 			remoteInfo = LoginDemo;
 		};
+		3339EBE22B293CEF005C1020 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3339EB862B292E4E005C1020 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3339EB8E2B292E4F005C1020;
+			remoteInfo = Login;
+		};
+		3339EBE72B293CFA005C1020 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3339EB862B292E4E005C1020 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3339EB8E2B292E4F005C1020;
+			remoteInfo = Login;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3339EBE42B293CEF005C1020 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3339EBEC2B293D01005C1020 /* Components.framework in Embed Frameworks */,
+				3339EBE12B293CEF005C1020 /* Login.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3339EBE92B293CFB005C1020 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3339EBF32B293D13005C1020 /* Components.framework in Embed Frameworks */,
+				3339EBE62B293CFA005C1020 /* Login.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3339EBF02B293D0F005C1020 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3339EBEF2B293D0E005C1020 /* Components.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3339EB8F2B292E4F005C1020 /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +112,9 @@
 		3339EBCA2B293017005C1020 /* LoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3339EBCC2B293017005C1020 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		3339EBCE2B293017005C1020 /* LoginUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3339EBEA2B293D01005C1020 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3339EBED2B293D0E005C1020 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3339EBF12B293D13005C1020 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3339EBEE2B293D0E005C1020 /* Components.framework in Frameworks */,
 				3339EB9A2B292E4F005C1020 /* Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3339EBEB2B293D01005C1020 /* Components.framework in Frameworks */,
+				3339EBE02B293CEF005C1020 /* Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +147,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3339EBF22B293D13005C1020 /* Components.framework in Frameworks */,
+				3339EBE52B293CFA005C1020 /* Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +163,7 @@
 				3339EB9D2B292E4F005C1020 /* UnitTests */,
 				3339EBCB2B293017005C1020 /* UITests */,
 				3339EB902B292E4F005C1020 /* Products */,
+				3339EBDF2B293CEF005C1020 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +231,16 @@
 			path = UITests;
 			sourceTree = "<group>";
 		};
+		3339EBDF2B293CEF005C1020 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3339EBF12B293D13005C1020 /* Components.framework */,
+				3339EBED2B293D0E005C1020 /* Components.framework */,
+				3339EBEA2B293D01005C1020 /* Components.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -199,6 +280,7 @@
 				3339EB952B292E4F005C1020 /* Sources */,
 				3339EB962B292E4F005C1020 /* Frameworks */,
 				3339EB972B292E4F005C1020 /* Resources */,
+				3339EBF02B293D0F005C1020 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,10 +299,12 @@
 				3339EBB42B292FE4005C1020 /* Sources */,
 				3339EBB52B292FE4005C1020 /* Frameworks */,
 				3339EBB62B292FE4005C1020 /* Resources */,
+				3339EBE42B293CEF005C1020 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3339EBE32B293CEF005C1020 /* PBXTargetDependency */,
 			);
 			name = LoginDemo;
 			productName = LoginDemo;
@@ -234,11 +318,13 @@
 				3339EBC62B293017005C1020 /* Sources */,
 				3339EBC72B293017005C1020 /* Frameworks */,
 				3339EBC82B293017005C1020 /* Resources */,
+				3339EBE92B293CFB005C1020 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				3339EBD12B293017005C1020 /* PBXTargetDependency */,
+				3339EBE82B293CFA005C1020 /* PBXTargetDependency */,
 			);
 			name = LoginUITests;
 			productName = LoginUITests;
@@ -371,6 +457,16 @@
 			isa = PBXTargetDependency;
 			target = 3339EBB72B292FE4005C1020 /* LoginDemo */;
 			targetProxy = 3339EBD02B293017005C1020 /* PBXContainerItemProxy */;
+		};
+		3339EBE32B293CEF005C1020 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3339EB8E2B292E4F005C1020 /* Login */;
+			targetProxy = 3339EBE22B293CEF005C1020 /* PBXContainerItemProxy */;
+		};
+		3339EBE82B293CFA005C1020 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3339EB8E2B292E4F005C1020 /* Login */;
+			targetProxy = 3339EBE72B293CFA005C1020 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
