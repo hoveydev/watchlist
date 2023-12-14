@@ -11,9 +11,22 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct WatchListApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @State private var rootRoutes: [RootRoutes] = []
     var body: some Scene {
         WindowGroup {
-            AppStart()
+            NavigationStack(path: $rootRoutes) {
+                AppStart()
+                    .navigationDestination(for: RootRoutes.self) { route in
+                        switch route {
+                        case .login(let viewState):
+                            Text("Login")
+                        case .register(let viewState):
+                            Text("Register")
+                        case .splash(let viewState):
+                            Text("Splash")
+                        }
+                    }
+            }
         }
     }
 }
@@ -31,6 +44,14 @@ struct AppStart: View {
                         self.isActive = true
                     }
                 }
-        ) : AnyView(ContentView().environmentObject(AppStore(initial: AppState(loginState: LoginState()), reducer: appReducer)))
+        ) : AnyView(
+            ContentView()
+                .environmentObject(
+                    AppStore(
+                        initial: AppState(),
+                        reducer: appReducer
+                    )
+                )
+        )
     }
 }

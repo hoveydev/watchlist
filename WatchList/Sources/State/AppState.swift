@@ -1,8 +1,8 @@
 import Foundation
 
-protocol ReduxState { }
+public protocol ReduxState { }
 
-struct AppState: ReduxState {
+public struct AppState: ReduxState {
     var textTest: String = "This is a test"
     var timesClicked: Int = 0
     var isLoggedIn: Bool = false

@@ -6,7 +6,7 @@ struct ContentView: View {
     @EnvironmentObject var store: AppStore
     var body: some View {
         VStack {
-            LoginView(email: "", password: "")
+            Login(viewModel: Login.ViewModel(id: UUID()))
         }
     }
 }

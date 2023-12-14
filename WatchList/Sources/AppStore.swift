@@ -2,7 +2,7 @@ import Foundation
 
 typealias AppStore = Store<AppState, AppAction>
 
-final class Store<State: ReduxState, Action>: ObservableObject {
+public final class Store<State: ReduxState, Action>: ObservableObject {
 
     @Published private (set) var state: State
     private let reducer: Reducer<State, Action>

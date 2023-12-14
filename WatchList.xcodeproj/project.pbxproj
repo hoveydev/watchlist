@@ -42,8 +42,9 @@
 		33712AE12B29E2F30034F29F /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		33712AE22B29E2F30034F29F /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBAF2B292E4F005C1020 /* Login.framework */; };
 		33712AE32B29E2F30034F29F /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBAF2B292E4F005C1020 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33712AEC2B2B565B0034F29F /* RootRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33712AEB2B2B565B0034F29F /* RootRoutes.swift */; };
 		337894442B27F4A000B7EC7D /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894432B27F4A000B7EC7D /* LoginState.swift */; };
-		337894462B27FF3900B7EC7D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894452B27FF3900B7EC7D /* LoginView.swift */; };
+		337894462B27FF3900B7EC7D /* LoginMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894452B27FF3900B7EC7D /* LoginMediator.swift */; };
 		337894482B288D4A00B7EC7D /* DashboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894472B288D4A00B7EC7D /* DashboardState.swift */; };
 		3378944A2B288D7900B7EC7D /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894492B288D7900B7EC7D /* DashboardView.swift */; };
 /* End PBXBuildFile section */
@@ -200,8 +201,9 @@
 		3367C4A62B16E162000869A7 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		3367C4A82B16E19F000869A7 /* AppActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppActions.swift; sourceTree = "<group>"; };
 		3367C4AA2B17E7FC000869A7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		33712AEB2B2B565B0034F29F /* RootRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRoutes.swift; sourceTree = "<group>"; };
 		337894432B27F4A000B7EC7D /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
-		337894452B27FF3900B7EC7D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		337894452B27FF3900B7EC7D /* LoginMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMediator.swift; sourceTree = "<group>"; };
 		337894472B288D4A00B7EC7D /* DashboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardState.swift; sourceTree = "<group>"; };
 		337894492B288D7900B7EC7D /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		33798F822B128C6000203C90 /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = UnitTests.xctestplan; path = TestPlans/UnitTests.xctestplan; sourceTree = "<group>"; };
@@ -338,10 +340,18 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		33712AEA2B2A5A3C0034F29F /* Mediators */ = {
+			isa = PBXGroup;
+			children = (
+				3378944B2B2890A800B7EC7D /* Login */,
+			);
+			path = Mediators;
+			sourceTree = "<group>";
+		};
 		3378944B2B2890A800B7EC7D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				337894452B27FF3900B7EC7D /* LoginView.swift */,
+				337894452B27FF3900B7EC7D /* LoginMediator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -397,10 +407,11 @@
 			isa = PBXGroup;
 			children = (
 				331687012B08EE1B0067F374 /* WatchListApp.swift */,
+				33712AEB2B2B565B0034F29F /* RootRoutes.swift */,
 				3343F23F2B092F310022F573 /* WatchListSplashScreen.swift */,
 				3367C4A42B16E10C000869A7 /* AppStore.swift */,
+				33712AEA2B2A5A3C0034F29F /* Mediators */,
 				3339EBF52B29510C005C1020 /* State */,
-				3378944B2B2890A800B7EC7D /* Login */,
 				3367C4A62B16E162000869A7 /* AppReducer.swift */,
 				3367C4A82B16E19F000869A7 /* AppActions.swift */,
 				331687032B08EE1B0067F374 /* ContentView.swift */,
@@ -639,9 +650,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				331687042B08EE1B0067F374 /* ContentView.swift in Sources */,
+				33712AEC2B2B565B0034F29F /* RootRoutes.swift in Sources */,
 				3367C4A92B16E19F000869A7 /* AppActions.swift in Sources */,
 				3343F2402B092F310022F573 /* WatchListSplashScreen.swift in Sources */,
-				337894462B27FF3900B7EC7D /* LoginView.swift in Sources */,
+				337894462B27FF3900B7EC7D /* LoginMediator.swift in Sources */,
 				331687022B08EE1B0067F374 /* WatchListApp.swift in Sources */,
 				3367C4A72B16E162000869A7 /* AppReducer.swift in Sources */,
 				3378944A2B288D7900B7EC7D /* DashboardView.swift in Sources */,
