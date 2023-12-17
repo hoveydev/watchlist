@@ -1,9 +1,10 @@
 import SwiftUI
+import Login
 
 struct LoginContentView: View {
     var body: some View {
         VStack {
-            LoginView(email: "", password: "")
+            LoginView(viewState: Login.LoginViewState())
         }
     }
 }

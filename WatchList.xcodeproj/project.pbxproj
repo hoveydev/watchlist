@@ -22,7 +22,7 @@
 		33432A712B0FC0BF00FBB60A /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		33432A732B0FC0C400FBB60A /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; };
 		33432A742B0FC0C400FBB60A /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3343F2402B092F310022F573 /* WatchListSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343F23F2B092F310022F573 /* WatchListSplashScreen.swift */; };
+		3343F2402B092F310022F573 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343F23F2B092F310022F573 /* SplashScreen.swift */; };
 		3367C48D2B14BE1B000869A7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3367C48C2B14BE1B000869A7 /* FirebaseAnalytics */; };
 		3367C48F2B14BE1B000869A7 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3367C48E2B14BE1B000869A7 /* FirebaseAnalyticsSwift */; };
 		3367C4912B14BE1B000869A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3367C4902B14BE1B000869A7 /* FirebaseAuth */; };
@@ -43,7 +43,7 @@
 		33712AE22B29E2F30034F29F /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBAF2B292E4F005C1020 /* Login.framework */; };
 		33712AE32B29E2F30034F29F /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBAF2B292E4F005C1020 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		33712AEC2B2B565B0034F29F /* RootRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33712AEB2B2B565B0034F29F /* RootRoutes.swift */; };
-		337894442B27F4A000B7EC7D /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894432B27F4A000B7EC7D /* LoginState.swift */; };
+		33712AEE2B2C794C0034F29F /* SplashState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33712AED2B2C794C0034F29F /* SplashState.swift */; };
 		337894462B27FF3900B7EC7D /* LoginMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894452B27FF3900B7EC7D /* LoginMediator.swift */; };
 		337894482B288D4A00B7EC7D /* DashboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894472B288D4A00B7EC7D /* DashboardState.swift */; };
 		3378944A2B288D7900B7EC7D /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894492B288D7900B7EC7D /* DashboardView.swift */; };
@@ -195,14 +195,14 @@
 		3316871E2B08EE1C0067F374 /* WatchListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3339EBA92B292E4F005C1020 /* Login.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Login.xcodeproj; path = WatchList/Modules/Login/Login.xcodeproj; sourceTree = "<group>"; };
 		3339EBF42B29479E005C1020 /* Login.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Login.xctestplan; path = TestPlans/Login.xctestplan; sourceTree = "<group>"; };
-		3343F23F2B092F310022F573 /* WatchListSplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListSplashScreen.swift; sourceTree = "<group>"; };
+		3343F23F2B092F310022F573 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		3367C49C2B166E44000869A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3367C4A42B16E10C000869A7 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		3367C4A62B16E162000869A7 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		3367C4A82B16E19F000869A7 /* AppActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppActions.swift; sourceTree = "<group>"; };
 		3367C4AA2B17E7FC000869A7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		33712AEB2B2B565B0034F29F /* RootRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRoutes.swift; sourceTree = "<group>"; };
-		337894432B27F4A000B7EC7D /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		33712AED2B2C794C0034F29F /* SplashState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashState.swift; sourceTree = "<group>"; };
 		337894452B27FF3900B7EC7D /* LoginMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMediator.swift; sourceTree = "<group>"; };
 		337894472B288D4A00B7EC7D /* DashboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardState.swift; sourceTree = "<group>"; };
 		337894492B288D7900B7EC7D /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -326,7 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				3367C4AA2B17E7FC000869A7 /* AppState.swift */,
-				337894432B27F4A000B7EC7D /* LoginState.swift */,
+				33712AED2B2C794C0034F29F /* SplashState.swift */,
 				337894472B288D4A00B7EC7D /* DashboardState.swift */,
 			);
 			path = State;
@@ -408,7 +408,7 @@
 			children = (
 				331687012B08EE1B0067F374 /* WatchListApp.swift */,
 				33712AEB2B2B565B0034F29F /* RootRoutes.swift */,
-				3343F23F2B092F310022F573 /* WatchListSplashScreen.swift */,
+				3343F23F2B092F310022F573 /* SplashScreen.swift */,
 				3367C4A42B16E10C000869A7 /* AppStore.swift */,
 				33712AEA2B2A5A3C0034F29F /* Mediators */,
 				3339EBF52B29510C005C1020 /* State */,
@@ -652,13 +652,13 @@
 				331687042B08EE1B0067F374 /* ContentView.swift in Sources */,
 				33712AEC2B2B565B0034F29F /* RootRoutes.swift in Sources */,
 				3367C4A92B16E19F000869A7 /* AppActions.swift in Sources */,
-				3343F2402B092F310022F573 /* WatchListSplashScreen.swift in Sources */,
+				3343F2402B092F310022F573 /* SplashScreen.swift in Sources */,
 				337894462B27FF3900B7EC7D /* LoginMediator.swift in Sources */,
 				331687022B08EE1B0067F374 /* WatchListApp.swift in Sources */,
 				3367C4A72B16E162000869A7 /* AppReducer.swift in Sources */,
 				3378944A2B288D7900B7EC7D /* DashboardView.swift in Sources */,
 				337894482B288D4A00B7EC7D /* DashboardState.swift in Sources */,
-				337894442B27F4A000B7EC7D /* LoginState.swift in Sources */,
+				33712AEE2B2C794C0034F29F /* SplashState.swift in Sources */,
 				3367C4AB2B17E7FC000869A7 /* AppState.swift in Sources */,
 				3367C4A52B16E10C000869A7 /* AppStore.swift in Sources */,
 			);

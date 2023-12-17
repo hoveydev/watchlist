@@ -1,26 +1,28 @@
 import SwiftUI
 import Components
 
-struct WatchListSplashScreen: View {
-    @State private var size: Double = 0.8
-    @State private var opacity: Double = 0.5
+struct SplashScreen: View {
+    @EnvironmentObject var store: AppStore
     
     var body: some View {
+        let splashState = store.state.splashState
         VStack {
             VStack {
                 Image(systemName: "movieclapper.fill")
                     .font(.system(size: 80))
                     .foregroundColor(.blue)
-                Text("Watch List")
+                Text(splashState.title)
                     .font(.wListTitle)
                     .foregroundColor(.black.opacity(0.8))
             }
-            .scaleEffect(size)
-            .opacity(opacity)
+            .scaleEffect(splashState.size)
+            .opacity(splashState.opacity)
             .onAppear {
                 withAnimation(.easeIn(duration: 1.2)) {
-                    self.size = 0.9
-                    self.opacity = 1.0
+                    store.dispatch(.animateLogo)
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    store.dispatch(.login)
                 }
             }
         }
@@ -28,5 +30,5 @@ struct WatchListSplashScreen: View {
 }
 
 //#Preview {
-//    WatchListSplashScreen()
+//    SplashScreen()
 //}

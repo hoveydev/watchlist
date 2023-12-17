@@ -5,16 +5,14 @@ typealias Reducer<ReduxState, Action> = (inout ReduxState, Action) -> Void
 func appReducer(state: inout AppState, action: AppAction) -> Void {
     
     switch action {
-    case .changeText:
-        state.timesClicked += 1
-        state.textTest = "Text has been changed \(state.timesClicked) times"
-    case let .enterEmail(email):
-        state.loginState.email = email
-    case let .enterPassword(password):
-        state.loginState.password = password
+    case .animateLogo:
+        var splashState = state.splashState
+        splashState.size = 0.9
+        splashState.opacity = 1.0
     case .login:
-        state.isLoggedIn = true
+        // state.isLoggedIn = true
+        state.rootViewStack = [.login(state.loginState)]
     case .logout:
-        state.isLoggedIn = false
+        print("logged out")
     }
 }

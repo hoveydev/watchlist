@@ -1,9 +1,7 @@
 import Foundation
 
 enum AppAction {
-    case changeText
-    case enterEmail(email: String)
-    case enterPassword(password: String)
+    case animateLogo
     case login
     case logout
 }
