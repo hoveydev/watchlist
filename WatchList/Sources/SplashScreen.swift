@@ -2,7 +2,6 @@ import SwiftUI
 import Components
 
 struct SplashScreen: View {
-    // @EnvironmentObject var store: AppStore
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
@@ -14,19 +13,16 @@ struct SplashScreen: View {
                 Text(viewModel.title)
                     .font(.wListTitle)
                     .foregroundColor(.black.opacity(0.8))
-                Button("Go to Login") {
-                    viewModel.buttonAction()
-                }
             }
             .scaleEffect(viewModel.size)
             .opacity(viewModel.opacity)
             .onAppear {
-//                withAnimation(.easeIn(duration: 1.2)) {
-//                    viewModel.textAnimation
-//                }
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//                    store.dispatch(.login)
-//                }
+                withAnimation(.easeIn(duration: 1.2)) {
+                    viewModel.textAnimation()
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    viewModel.buttonAction() // still need to test
+                }
             }
         }
     }

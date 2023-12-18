@@ -15,13 +15,5 @@ extension SplashScreen {
             self.textAnimation = textAnimation
             self.buttonAction = buttonAction
         }
-        
-        func setup(with state: AppState) {
-            self.title = state.splashState.title
-            self.size = state.splashState.size
-            self.opacity = state.splashState.opacity
-            // self.textAnimation = dispatch(.animateLogo)
-            // self.buttonAction = dispatch(.login)
-        }
     }
 }

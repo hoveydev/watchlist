@@ -29,6 +29,8 @@
 		3339EBF32B293D13005C1020 /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBF12B293D13005C1020 /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		33712AE92B2A54F20034F29F /* Login+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339EBF62B295B42005C1020 /* Login+View.swift */; };
 		33BA05722B2F44800031C84F /* Login+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA05712B2F44800031C84F /* Login+ViewModel.swift */; };
+		33BA057B2B310D6B0031C84F /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BA057A2B310D6B0031C84F /* Components.framework */; };
+		33BA057C2B310D6B0031C84F /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33BA057A2B310D6B0031C84F /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33BA057D2B310D6B0031C84F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				33BA057C2B310D6B0031C84F /* Components.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +132,7 @@
 		3339EBF12B293D13005C1020 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3339EBF62B295B42005C1020 /* Login+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+View.swift"; sourceTree = "<group>"; };
 		33BA05712B2F44800031C84F /* Login+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+ViewModel.swift"; sourceTree = "<group>"; };
+		33BA057A2B310D6B0031C84F /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33BA057B2B310D6B0031C84F /* Components.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +255,7 @@
 		3339EBDF2B293CEF005C1020 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33BA057A2B310D6B0031C84F /* Components.framework */,
 				3339EBF12B293D13005C1020 /* Components.framework */,
 				3339EBED2B293D0E005C1020 /* Components.framework */,
 				3339EBEA2B293D01005C1020 /* Components.framework */,
@@ -269,6 +285,7 @@
 				3339EB8B2B292E4F005C1020 /* Sources */,
 				3339EB8C2B292E4F005C1020 /* Frameworks */,
 				3339EB8D2B292E4F005C1020 /* Resources */,
+				33BA057D2B310D6B0031C84F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

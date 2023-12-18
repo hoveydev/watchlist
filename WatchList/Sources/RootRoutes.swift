@@ -38,9 +38,8 @@ struct RootRoutesView: View {
         NavigationStack {
             switch store.state.rootViewStack.last {
             case .splash:
-                let splashScreenMediator = SplashScreenMediator() // probably don't need this prop if this works
+                let splashScreenMediator = SplashScreenMediator()
                 let viewModel = splashScreenMediator.createSplashScreenViewModel(store: store)
-                // viewModel.setup(with: store.state, dispatch: store.dispatch(_:)) // possible solution - may need to remove
                 SplashScreen(viewModel: viewModel)
             case .login:
                 let loginMediator = LoginMediator()

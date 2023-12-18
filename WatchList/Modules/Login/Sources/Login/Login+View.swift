@@ -3,7 +3,6 @@ import Foundation
 import Components
 
 public struct Login: View {
-    // mediator level will handle the data passing
     @ObservedObject var viewModel: ViewModel
     
     public init(viewModel: ViewModel) {
@@ -16,7 +15,7 @@ public struct Login: View {
             SecureField("Password", text: $viewModel.password)
             Button("Click me!") {
                 print("button tapped")
-                viewModel.loginAction
+                viewModel.loginAction()
             }
         }
         .padding()

@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "Watch_List_Logo_One_large_rect.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
+  }
+}

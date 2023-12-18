@@ -11,13 +11,12 @@ extension SplashScreenMediator {
             size: 0.8,
             opacity: 0.5,
             textAnimation: {
-                store.dispatch(.animateLogo)
+                store.dispatch(.splash(.animateLogo))
             },
             buttonAction: {
-                store.dispatch(.login)
+                store.dispatch(.splash(.login))
             }
         )
-        viewModel.setup(with: store.state)
         return viewModel
     }
 }
