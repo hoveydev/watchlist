@@ -2,28 +2,31 @@ import SwiftUI
 import Components
 
 struct SplashScreen: View {
-    @EnvironmentObject var store: AppStore
+    // @EnvironmentObject var store: AppStore
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        let splashState = store.state.splashState
         VStack {
             VStack {
                 Image(systemName: "movieclapper.fill")
                     .font(.system(size: 80))
                     .foregroundColor(.blue)
-                Text(splashState.title)
+                Text(viewModel.title)
                     .font(.wListTitle)
                     .foregroundColor(.black.opacity(0.8))
+                Button("Go to Login") {
+                    viewModel.buttonAction()
+                }
             }
-            .scaleEffect(splashState.size)
-            .opacity(splashState.opacity)
+            .scaleEffect(viewModel.size)
+            .opacity(viewModel.opacity)
             .onAppear {
-                withAnimation(.easeIn(duration: 1.2)) {
-                    store.dispatch(.animateLogo)
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    store.dispatch(.login)
-                }
+//                withAnimation(.easeIn(duration: 1.2)) {
+//                    viewModel.textAnimation
+//                }
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//                    store.dispatch(.login)
+//                }
             }
         }
     }

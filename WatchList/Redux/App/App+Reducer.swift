@@ -1,5 +1,3 @@
-import Foundation
-
 typealias Reducer<ReduxState, Action> = (inout ReduxState, Action) -> Void
 
 func appReducer(state: inout AppState, action: AppAction) -> Void {
@@ -11,7 +9,7 @@ func appReducer(state: inout AppState, action: AppAction) -> Void {
         splashState.opacity = 1.0
     case .login:
         // state.isLoggedIn = true
-        state.rootViewStack = [.login(state.loginState)]
+        state.rootViewStack = [.login]
     case .logout:
         print("logged out")
     }
