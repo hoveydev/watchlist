@@ -1,7 +1,10 @@
+import SwiftUI
+
 public struct LoginState {
+    public var id: UUID = UUID()
     public var header: String
     public var subHeading: String
-    public var email: String // same state issue as before
+    public var email: String
     public var password: String
     public var loginButtonText: String
     public var isLoggedIn: Bool
@@ -13,6 +16,13 @@ public struct LoginState {
         self.password = password
         self.loginButtonText = loginButtonText
         self.isLoggedIn = isLoggedIn
+    }
+}
+
+// MARK: Hashable Conformance
+extension LoginState {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }
 

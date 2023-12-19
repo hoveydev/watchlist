@@ -1,5 +1,5 @@
 func loginReducer(state: inout AppState, action: LoginAction) -> Void {
-    var loginState = state.loginState.state
+    var loginState = state.loginState
 
     switch action {
     case let .enterEmail(email):

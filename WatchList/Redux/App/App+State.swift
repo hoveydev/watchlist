@@ -7,5 +7,5 @@ public struct AppState: ReduxState {
     var timesClicked: Int = 0
     var rootViewStack: [RootRoutes] = [.login]
     var isLoggedIn: Bool = LoginState().isLoggedIn // will this check the changes?
-    var loginState = LoginViewState()
+    var loginState = LoginState()
 }
