@@ -36,9 +36,10 @@
 		33712AE12B29E2F30034F29F /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		33712AE22B29E2F30034F29F /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBAF2B292E4F005C1020 /* Login.framework */; };
 		33712AE32B29E2F30034F29F /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBAF2B292E4F005C1020 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		33712AEC2B2B565B0034F29F /* RootRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33712AEB2B2B565B0034F29F /* RootRoutes.swift */; };
+		33712AEC2B2B565B0034F29F /* App+Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33712AEB2B2B565B0034F29F /* App+Routes.swift */; };
 		337894462B27FF3900B7EC7D /* LoginMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337894452B27FF3900B7EC7D /* LoginMediator.swift */; };
 		339B088B2B312D6600F712D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339B088A2B312D6600F712D8 /* LaunchScreen.storyboard */; };
+		339B088D2B323A1000F712D8 /* Login+Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339B088C2B323A1000F712D8 /* Login+Routes.swift */; };
 		33BA05592B2F3A590031C84F /* App+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA05582B2F3A590031C84F /* App+Action.swift */; };
 		33BA055B2B2F3A750031C84F /* App+Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA055A2B2F3A750031C84F /* App+Reducer.swift */; };
 		33BA055D2B2F3A900031C84F /* App+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA055C2B2F3A900031C84F /* App+State.swift */; };
@@ -194,12 +195,13 @@
 		3339EBA92B292E4F005C1020 /* Login.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Login.xcodeproj; path = WatchList/Modules/Login/Login.xcodeproj; sourceTree = "<group>"; };
 		3339EBF42B29479E005C1020 /* Login.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Login.xctestplan; path = TestPlans/Login.xctestplan; sourceTree = "<group>"; };
 		3367C49C2B166E44000869A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		33712AEB2B2B565B0034F29F /* RootRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRoutes.swift; sourceTree = "<group>"; };
+		33712AEB2B2B565B0034F29F /* App+Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Routes.swift"; sourceTree = "<group>"; };
 		337894452B27FF3900B7EC7D /* LoginMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMediator.swift; sourceTree = "<group>"; };
 		33798F822B128C6000203C90 /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = UnitTests.xctestplan; path = TestPlans/UnitTests.xctestplan; sourceTree = "<group>"; };
 		33798F832B128CAF00203C90 /* UITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = UITests.xctestplan; path = TestPlans/UITests.xctestplan; sourceTree = "<group>"; };
 		33798F862B12909C00203C90 /* Components.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Components.xctestplan; path = TestPlans/Components.xctestplan; sourceTree = "<group>"; };
 		339B088A2B312D6600F712D8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		339B088C2B323A1000F712D8 /* Login+Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Routes.swift"; sourceTree = "<group>"; };
 		339C83AA2B0D3D6400DBA0CE /* Components.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Components.xcodeproj; path = WatchList/Modules/Components/Components.xcodeproj; sourceTree = "<group>"; };
 		33A59AEB2B0E80BD00B1822D /* WatchList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = WatchList.xctestplan; path = TestPlans/WatchList.xctestplan; sourceTree = "<group>"; };
 		33BA05582B2F3A590031C84F /* App+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Action.swift"; sourceTree = "<group>"; };
@@ -277,8 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				33BA05792B30DF020031C84F /* Info.plist */,
-				33B865102B2F399500B2BD12 /* Redux */,
 				33E2F0242B0B8A9300A4FA1D /* Sources */,
+				33B865102B2F399500B2BD12 /* Redux */,
 				33E2F0252B0B8AB700A4FA1D /* Resources */,
 				331687072B08EE1C0067F374 /* Preview Content */,
 				331687112B08EE1C0067F374 /* UnitTests */,
@@ -394,6 +396,7 @@
 				33BA055C2B2F3A900031C84F /* App+State.swift */,
 				33BA055A2B2F3A750031C84F /* App+Reducer.swift */,
 				33BA05582B2F3A590031C84F /* App+Action.swift */,
+				33712AEB2B2B565B0034F29F /* App+Routes.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				33BA05692B2F3BCE0031C84F /* Login+State.swift */,
 				33BA056B2B2F3C220031C84F /* Login+Reducer.swift */,
 				33BA056D2B2F3C460031C84F /* Login+Action.swift */,
+				339B088C2B323A1000F712D8 /* Login+Routes.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -428,7 +432,6 @@
 			isa = PBXGroup;
 			children = (
 				331687012B08EE1B0067F374 /* WatchListApp.swift */,
-				33712AEB2B2B565B0034F29F /* RootRoutes.swift */,
 				33712AEA2B2A5A3C0034F29F /* Mediators */,
 			);
 			path = Sources;
@@ -665,7 +668,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33712AEC2B2B565B0034F29F /* RootRoutes.swift in Sources */,
+				33712AEC2B2B565B0034F29F /* App+Routes.swift in Sources */,
 				33BA056A2B2F3BCE0031C84F /* Login+State.swift in Sources */,
 				33BA056C2B2F3C220031C84F /* Login+Reducer.swift in Sources */,
 				337894462B27FF3900B7EC7D /* LoginMediator.swift in Sources */,
@@ -674,6 +677,7 @@
 				33BA055D2B2F3A900031C84F /* App+State.swift in Sources */,
 				33BA055F2B2F3AB30031C84F /* App+Store.swift in Sources */,
 				33BA055B2B2F3A750031C84F /* App+Reducer.swift in Sources */,
+				339B088D2B323A1000F712D8 /* Login+Routes.swift in Sources */,
 				33BA05592B2F3A590031C84F /* App+Action.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

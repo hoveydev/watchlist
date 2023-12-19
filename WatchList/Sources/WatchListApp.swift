@@ -15,7 +15,7 @@ struct WatchListApp: App {
     @StateObject private var store: AppStore = AppStore(initial: AppState(), reducer: appReducer)
     var body: some Scene {
         WindowGroup {
-            RootRoutesView().environment(store)
+            AppRoutesView().environment(store)
         }
     }
 }
