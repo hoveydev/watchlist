@@ -1,5 +1,4 @@
 enum AppAction {
-    case splash(SplashAction)
     case login(LoginAction)
 }
 
