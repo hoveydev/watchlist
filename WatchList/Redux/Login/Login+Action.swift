@@ -3,4 +3,5 @@ enum LoginAction {
     case enterPassword(password: String)
     case login
     case register
+    case testNone
 }

@@ -7,10 +7,12 @@ func loginReducer(state: inout AppState, action: LoginAction) -> Void {
     case let .enterPassword(password):
         loginState.password = password
     case .login:
-        loginState.isLoggedIn = true // maybe this isn't actually needed?
-        state.isLoggedIn = true // needs to be tested on a new screen - think it should be fine, but ya never know lol
+        state.isLoggedIn = true
         // will need to include the Firebase calls here
     case .register:
-        print("register pressed")
+        state.loginState.viewStack.append(.register)
+    // MARK: For testing ONLY
+    case .testNone:
+        _ = state.loginState.viewStack.popLast()
     }
 }

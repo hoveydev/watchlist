@@ -11,7 +11,7 @@ struct AppRoutesView: View {
     @EnvironmentObject var store: AppStore
     var body: some View {
         NavigationStack {
-            switch store.state.rootViewStack.last {
+            switch store.state.viewStack.last {
             case .login:
                 LoginRoutesView().environment(store)
             case .none:

@@ -16,7 +16,6 @@
 		3339EBBF2B292FE5005C1020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3339EBBE2B292FE5005C1020 /* Assets.xcassets */; };
 		3339EBC22B292FE5005C1020 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3339EBC12B292FE5005C1020 /* Preview Assets.xcassets */; };
 		3339EBCD2B293017005C1020 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339EBCC2B293017005C1020 /* LoginUITests.swift */; };
-		3339EBCF2B293017005C1020 /* LoginUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339EBCE2B293017005C1020 /* LoginUITestsLaunchTests.swift */; };
 		3339EBE02B293CEF005C1020 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EB8F2B292E4F005C1020 /* Login.framework */; };
 		3339EBE12B293CEF005C1020 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EB8F2B292E4F005C1020 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3339EBE52B293CFA005C1020 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EB8F2B292E4F005C1020 /* Login.framework */; };
@@ -126,7 +125,6 @@
 		3339EBC12B292FE5005C1020 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3339EBCA2B293017005C1020 /* LoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3339EBCC2B293017005C1020 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
-		3339EBCE2B293017005C1020 /* LoginUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3339EBEA2B293D01005C1020 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3339EBED2B293D0E005C1020 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3339EBF12B293D13005C1020 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				3339EBCC2B293017005C1020 /* LoginUITests.swift */,
-				3339EBCE2B293017005C1020 /* LoginUITestsLaunchTests.swift */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -465,7 +462,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3339EBCF2B293017005C1020 /* LoginUITestsLaunchTests.swift in Sources */,
 				3339EBCD2B293017005C1020 /* LoginUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

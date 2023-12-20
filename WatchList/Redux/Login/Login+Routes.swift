@@ -10,7 +10,7 @@ struct LoginRoutesView: View {
     @EnvironmentObject var store: AppStore
     var body: some View {
         NavigationStack {
-            switch store.state.loginViewStack.last {
+            switch store.state.loginState.viewStack.last {
             case .root:
                 let loginMediator = LoginMediator()
                 let viewModel = loginMediator.createLoginViewModel(store: store)

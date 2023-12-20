@@ -20,6 +20,11 @@
           "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
           "identifier" : "33E2EFFB2B0B890800A4FA1D",
           "name" : "Components"
+        },
+        {
+          "containerPath" : "container:WatchList\/Modules\/Login\/Login.xcodeproj",
+          "identifier" : "3339EB8E2B292E4F005C1020",
+          "name" : "Login"
         }
       ]
     },

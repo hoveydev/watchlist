@@ -10,15 +10,13 @@ final class WatchListUITests: XCTestCase {
     override func tearDownWithError() throws {
     }
 
-    func testLandingAfterSplashScreen() throws {
+    func testLoginAfterLaunchScreen() throws {
         let app = XCUIApplication()
         app.launch()
-        
-        let splashText = app.staticTexts["Watch List"]
-        XCTAssertTrue(splashText.exists)
-        sleep(4) // waits for splash screen animation to finish
-        let landingText = app.staticTexts["This is a test"]
-        XCTAssertTrue(landingText.exists)
-        XCTAssertFalse(splashText.exists)
+
+        let loginButton = app.buttons["Click me!"]
+        XCTAssertTrue(loginButton.exists)
+        loginButton.tap()
+        XCTAssertTrue(loginButton.exists) // this shouls still exist because currently, this button does nothing
     }
 }
