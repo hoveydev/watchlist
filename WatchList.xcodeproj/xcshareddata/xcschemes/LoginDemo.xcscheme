@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33E2F03B2B0B904200A4FA1D"
-               BuildableName = "ComponentsDemo.app"
-               BlueprintName = "ComponentsDemo"
-               ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
+               BlueprintIdentifier = "3339EBB72B292FE4005C1020"
+               BuildableName = "LoginDemo.app"
+               BlueprintName = "LoginDemo"
+               ReferencedContainer = "container:WatchList/Modules/Login/Login.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33E2EFFB2B0B890800A4FA1D"
-               BuildableName = "Components.framework"
-               BlueprintName = "Components"
-               ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
+               BlueprintIdentifier = "3339EB8E2B292E4F005C1020"
+               BuildableName = "Login.framework"
+               BlueprintName = "Login"
+               ReferencedContainer = "container:WatchList/Modules/Login/Login.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -42,10 +42,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33E2F0052B0B890800A4FA1D"
-               BuildableName = "ComponentsTests.xctest"
-               BlueprintName = "ComponentsTests"
-               ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
+               BlueprintIdentifier = "3339EB982B292E4F005C1020"
+               BuildableName = "LoginTests.xctest"
+               BlueprintName = "LoginTests"
+               ReferencedContainer = "container:WatchList/Modules/Login/Login.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -56,10 +56,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33E2F02E2B0B8FE400A4FA1D"
-               BuildableName = "ComponentsUITests.xctest"
-               BlueprintName = "ComponentsUITests"
-               ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
+               BlueprintIdentifier = "3339EBC92B293017005C1020"
+               BuildableName = "LoginUITests.xctest"
+               BlueprintName = "LoginUITests"
+               ReferencedContainer = "container:WatchList/Modules/Login/Login.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -70,6 +70,19 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3339EBC92B293017005C1020"
+               BuildableName = "LoginUITests.xctest"
+               BlueprintName = "LoginUITests"
+               ReferencedContainer = "container:WatchList/Modules/Login/Login.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -85,10 +98,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33E2F03B2B0B904200A4FA1D"
-            BuildableName = "ComponentsDemo.app"
-            BlueprintName = "ComponentsDemo"
-            ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
+            BlueprintIdentifier = "3339EBB72B292FE4005C1020"
+            BuildableName = "LoginDemo.app"
+            BlueprintName = "LoginDemo"
+            ReferencedContainer = "container:WatchList/Modules/Login/Login.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -98,15 +111,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33E2EFFB2B0B890800A4FA1D"
-            BuildableName = "Components.framework"
-            BlueprintName = "Components"
-            ReferencedContainer = "container:WatchList/Modules/Components/Components.xcodeproj">
+            BlueprintIdentifier = "3339EBB72B292FE4005C1020"
+            BuildableName = "LoginDemo.app"
+            BlueprintName = "LoginDemo"
+            ReferencedContainer = "container:WatchList/Modules/Login/Login.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

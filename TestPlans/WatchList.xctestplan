@@ -20,6 +20,11 @@
           "containerPath" : "container:WatchList\/Modules\/Components\/Components.xcodeproj",
           "identifier" : "33E2EFFB2B0B890800A4FA1D",
           "name" : "Components"
+        },
+        {
+          "containerPath" : "container:WatchList\/Modules\/Login\/Login.xcodeproj",
+          "identifier" : "3339EB8E2B292E4F005C1020",
+          "name" : "Login"
         }
       ]
     },
@@ -30,6 +35,22 @@
     }
   },
   "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:WatchList.xcodeproj",
+        "identifier" : "3316870D2B08EE1C0067F374",
+        "name" : "WatchListTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:WatchList.xcodeproj",
+        "identifier" : "331687172B08EE1C0067F374",
+        "name" : "WatchListUITests"
+      }
+    },
     {
       "parallelizable" : true,
       "target" : {
@@ -49,17 +70,17 @@
     {
       "parallelizable" : true,
       "target" : {
-        "containerPath" : "container:WatchList.xcodeproj",
-        "identifier" : "3316870D2B08EE1C0067F374",
-        "name" : "WatchListTests"
+        "containerPath" : "container:WatchList\/Modules\/Login\/Login.xcodeproj",
+        "identifier" : "3339EB982B292E4F005C1020",
+        "name" : "LoginTests"
       }
     },
     {
       "parallelizable" : true,
       "target" : {
-        "containerPath" : "container:WatchList.xcodeproj",
-        "identifier" : "331687172B08EE1C0067F374",
-        "name" : "WatchListUITests"
+        "containerPath" : "container:WatchList\/Modules\/Login\/Login.xcodeproj",
+        "identifier" : "3339EBC92B293017005C1020",
+        "name" : "LoginUITests"
       }
     }
   ],

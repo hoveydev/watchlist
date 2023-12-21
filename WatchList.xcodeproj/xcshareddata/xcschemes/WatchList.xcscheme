@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1510"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -41,6 +41,9 @@
          <TestPlanReference
             reference = "container:TestPlans/Components.xctestplan">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:TestPlans/Login.xctestplan">
+         </TestPlanReference>
       </TestPlans>
    </TestAction>
    <LaunchAction
@@ -70,8 +73,7 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "331686FD2B08EE1B0067F374"
@@ -79,7 +81,7 @@
             BlueprintName = "WatchList"
             ReferencedContainer = "container:WatchList.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

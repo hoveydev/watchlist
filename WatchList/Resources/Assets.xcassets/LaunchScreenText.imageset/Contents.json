@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Watch_List_Logo_One_large.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

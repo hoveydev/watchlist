@@ -1,9 +1,10 @@
 import XCTest
+@testable import Login
 
-final class ComponentsUITests: XCTestCase {
+final class LoginTests: XCTestCase {
 
     override func setUpWithError() throws {
-        continueAfterFailure = false
+        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
@@ -11,7 +12,7 @@ final class ComponentsUITests: XCTestCase {
     }
 
     func testExample() throws {
-        let app = XCUIApplication()
-        app.launch()
+        // No tests yet
     }
+
 }

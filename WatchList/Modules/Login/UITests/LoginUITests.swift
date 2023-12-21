@@ -1,28 +1,24 @@
 import XCTest
-import SwiftUI
 
-final class WatchListUITests: XCTestCase {
+final class LoginUITests: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
     }
 
     override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testLoginAfterLaunchScreen() throws {
+    func testLoginView() throws {
         let app = XCUIApplication()
         app.launch()
 
         let emailInput = app.textFields["Email"]
-        emailInput.tap()
-        emailInput.typeText("test")
         let passwordInput = app.secureTextFields["Password"]
-        passwordInput.tap()
-        passwordInput.typeText("test")
+        XCTAssertTrue(emailInput.exists)
+        XCTAssertTrue(passwordInput.exists)
         let loginButton = app.buttons["Click me!"]
         XCTAssertTrue(loginButton.exists)
-        loginButton.tap()
-        XCTAssertTrue(loginButton.exists) // this shouls still exist because currently, this button does nothing
     }
 }

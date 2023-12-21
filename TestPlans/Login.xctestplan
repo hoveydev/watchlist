@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "619652EE-4E1A-4C3C-B1B7-BADE0887FBE8",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:WatchList\/Modules\/Login\/Login.xcodeproj",
+        "identifier" : "3339EB982B292E4F005C1020",
+        "name" : "LoginTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:WatchList\/Modules\/Login\/Login.xcodeproj",
+        "identifier" : "3339EBC92B293017005C1020",
+        "name" : "LoginUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
