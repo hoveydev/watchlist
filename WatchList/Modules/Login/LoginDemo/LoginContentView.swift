@@ -4,9 +4,17 @@ import Login
 struct LoginContentView: View {
     var body: some View {
         VStack {
-            Login(viewModel: .init(email: "Test", password: "Password", loginAction: {
-                print("logged in bitch")
-            }))
+            Login(viewModel: .init(
+                loginAction: {
+                    print("logged in bitch")
+                },
+                emailChangeAction: { _ in
+                    print("email changed")
+                },
+                passwordCangeAction: { _ in
+                    print("password changed")
+                }
+            ))
         }
     }
 }

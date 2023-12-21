@@ -1,6 +1,7 @@
 import SwiftUI
+import Components
 
-public struct LoginState {
+public struct LoginState: ReduxState {
     var id: UUID = UUID()
     var viewStack: [LoginRoutes] = [.root]
     var header: String = "Watch List"
@@ -10,6 +11,3 @@ public struct LoginState {
     var loginButtonText: String = "Login"
     var isLoggedIn: Bool = false
 }
-
-// MARK: Equatable Conformance
-extension LoginState: Equatable { }

@@ -1,9 +1,10 @@
 import SwiftUI
 import Foundation
-import Components
 
 public struct Login: View {
     @ObservedObject var viewModel: ViewModel
+    @State var email: String = ""
+    @State var password: String = ""
     
     public init(viewModel: ViewModel) {
         self.viewModel = viewModel
@@ -11,10 +12,15 @@ public struct Login: View {
 
     public var body: some View {
         VStack {
-            TextField("Email", text: $viewModel.email)
-            SecureField("Password", text: $viewModel.password)
+            TextField("Email", text: $email)
+                .onChange(of: email) {
+                    viewModel.emailChangeAction(email)
+                }
+            SecureField("Password", text: $password)
+                .onChange(of: password) {
+                    viewModel.passwordCangeAction(password)
+                }
             Button("Click me!") {
-                print("button tapped")
                 viewModel.loginAction()
             }
         }

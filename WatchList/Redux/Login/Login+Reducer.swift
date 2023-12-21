@@ -1,12 +1,13 @@
 func loginReducer(state: inout AppState, action: LoginAction) -> Void {
-    var loginState = state.loginState
 
     switch action {
     case let .enterEmail(email):
-        loginState.email = email
+        state.loginState.email = email
     case let .enterPassword(password):
-        loginState.password = password
+        state.loginState.password = password
     case .login:
+        let mediator = LoginMediator()
+        mediator.logInWithFirebase(state: state) // need to check result
         state.isLoggedIn = true
         // will need to include the Firebase calls here
     case .register:
