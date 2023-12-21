@@ -14,6 +14,12 @@ final class WatchListUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
+        let emailInput = app.textFields["Email"]
+        emailInput.tap()
+        emailInput.typeText("test")
+        let passwordInput = app.secureTextFields["Password"]
+        passwordInput.tap()
+        passwordInput.typeText("test")
         let loginButton = app.buttons["Click me!"]
         XCTAssertTrue(loginButton.exists)
         loginButton.tap()
