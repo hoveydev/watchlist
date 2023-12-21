@@ -7,6 +7,7 @@ struct ComponentContentView: View {
             VStack {
                 List {
                     NavigationLink("WListText", destination: WListTextView())
+                    NavigationLink("WListTextField", destination: WListTextFieldView())
                 }
             }
             .wListNavBar("Components", placement: .topBarLeading, isMain: true)

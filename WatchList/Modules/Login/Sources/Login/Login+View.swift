@@ -1,5 +1,6 @@
 import SwiftUI
 import Foundation
+import Components
 
 public struct Login: View {
     @ObservedObject var viewModel: ViewModel
@@ -12,11 +13,11 @@ public struct Login: View {
 
     public var body: some View {
         VStack {
-            TextField("Email", text: $email)
+            WListTextField("Email:", text: $email, isSecure: false)
                 .onChange(of: email) {
                     viewModel.emailChangeAction(email)
                 }
-            SecureField("Password", text: $password)
+            WListTextField("Password:", text: $password, isSecure: true)
                 .onChange(of: password) {
                     viewModel.passwordCangeAction(password)
                 }

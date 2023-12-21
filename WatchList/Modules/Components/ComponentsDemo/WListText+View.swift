@@ -1,5 +1,4 @@
 import SwiftUI
-import Components
 
 struct WListTextView: View {
     var body: some View {
