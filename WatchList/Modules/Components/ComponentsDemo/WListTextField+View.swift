@@ -1,4 +1,5 @@
 import SwiftUI
+import Components
 
 struct WListTextFieldView: View {
     @State var textOne: String = ""
@@ -8,13 +9,15 @@ struct WListTextFieldView: View {
         HStack {
             VStack(alignment: .leading) {
                 WListTextField("Username:", text: $textOne, isSecure: false)
+                    .accessibilityLabel("UsernameTextField")
                 WListTextField("Password:", text: $textTwo, isSecure: true)
+                    .accessibilityLabel("PasswordTextField")
             }
             .padding()
             Spacer()
         }
         .padding()
-        .wListNavBar("WListText", placement: .principal, isMain: false)
+        .wListNavBar("WListTextField", placement: .principal, isMain: false)
         Spacer()
     }
 }

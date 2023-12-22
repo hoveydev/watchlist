@@ -29,7 +29,7 @@ struct navText: View {
 }
 
 extension View {
-    func wListNavBar(_ text: String, placement: ToolbarItemPlacement, isMain: Bool) -> some View {
+    public func wListNavBar(_ text: String, placement: ToolbarItemPlacement, isMain: Bool) -> some View {
         modifier(WListNavBar(text: text, placement: placement, isMain: isMain))
     }
 }

@@ -23,10 +23,12 @@ public struct Login: View {
                 .onChange(of: email) {
                     viewModel.emailChangeAction(email)
                 }
+                .accessibilityIdentifier("Email")
             WListTextField(viewModel.passwordLabel, text: $password, isSecure: true)
                 .onChange(of: password) {
                     viewModel.passwordCangeAction(password)
                 }
+                .accessibilityIdentifier("Password")
             WListButton(viewModel.buttonLabel) {
                 viewModel.loginAction()
             }

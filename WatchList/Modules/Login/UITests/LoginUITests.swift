@@ -18,7 +18,12 @@ final class LoginUITests: XCTestCase {
         let passwordInput = app.secureTextFields["Password"]
         XCTAssertTrue(emailInput.exists)
         XCTAssertTrue(passwordInput.exists)
-        let loginButton = app.buttons["Click me!"]
+        emailInput.tap()
+        emailInput.typeText("test")
+        passwordInput.tap()
+        passwordInput.typeText("test")
+        let loginButton = app.buttons["Button Label"]
         XCTAssertTrue(loginButton.exists)
+        loginButton.tap()
     }
 }

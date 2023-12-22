@@ -231,6 +231,7 @@
 		33BA056B2B2F3C220031C84F /* Login+Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Reducer.swift"; sourceTree = "<group>"; };
 		33BA056D2B2F3C460031C84F /* Login+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Action.swift"; sourceTree = "<group>"; };
 		33BA05792B30DF020031C84F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		33F531542B362BCB00CAC9D3 /* ComponentsDemo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = ComponentsDemo.xctestplan; path = TestPlans/ComponentsDemo.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				33798F862B12909C00203C90 /* Components.xctestplan */,
+				33F531542B362BCB00CAC9D3 /* ComponentsDemo.xctestplan */,
 			);
 			name = Components;
 			sourceTree = "<group>";
