@@ -37,6 +37,8 @@
 		33F5314D2B346B0B00CAC9D3 /* WListTextField+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5314C2B346B0B00CAC9D3 /* WListTextField+View.swift */; };
 		33F5314E2B346B0B00CAC9D3 /* WListTextField+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5314C2B346B0B00CAC9D3 /* WListTextField+View.swift */; };
 		33F5314F2B346B2C00CAC9D3 /* WListText+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339C835C2B0C4FEE00DBA0CE /* WListText+View.swift */; };
+		33F531512B34F36C00CAC9D3 /* WListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F531502B34F36C00CAC9D3 /* WListButton.swift */; };
+		33F531522B34F36C00CAC9D3 /* WListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F531502B34F36C00CAC9D3 /* WListButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +130,7 @@
 		33E2F0632B0C3CF500A4FA1D /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		33F531492B34677000CAC9D3 /* WListTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WListTextField.swift; sourceTree = "<group>"; };
 		33F5314C2B346B0B00CAC9D3 /* WListTextField+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WListTextField+View.swift"; sourceTree = "<group>"; };
+		33F531502B34F36C00CAC9D3 /* WListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WListButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +198,7 @@
 				33E2F0292B0B8BD500A4FA1D /* WListText.swift */,
 				339C83602B0CDDC200DBA0CE /* WListNavBar.swift */,
 				33F531492B34677000CAC9D3 /* WListTextField.swift */,
+				33F531502B34F36C00CAC9D3 /* WListButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -468,6 +472,7 @@
 				33F5314D2B346B0B00CAC9D3 /* WListTextField+View.swift in Sources */,
 				33F5314F2B346B2C00CAC9D3 /* WListText+View.swift in Sources */,
 				33E2F0622B0C3BF200A4FA1D /* Colors.swift in Sources */,
+				33F531512B34F36C00CAC9D3 /* WListButton.swift in Sources */,
 				33F5314A2B34677000CAC9D3 /* WListTextField.swift in Sources */,
 				33E2F0012B0B890800A4FA1D /* Components.docc in Sources */,
 				33E2F0592B0BD1E800A4FA1D /* FontSize.swift in Sources */,
@@ -498,6 +503,7 @@
 				33F5314E2B346B0B00CAC9D3 /* WListTextField+View.swift in Sources */,
 				339C83612B0CDDC200DBA0CE /* WListNavBar.swift in Sources */,
 				33E2F0412B0B904200A4FA1D /* ComponentsContentView.swift in Sources */,
+				33F531522B34F36C00CAC9D3 /* WListButton.swift in Sources */,
 				339C835D2B0C4FEE00DBA0CE /* WListText+View.swift in Sources */,
 				33E2F03F2B0B904200A4FA1D /* ComponentsDemoApp.swift in Sources */,
 				33E2F04C2B0B976400A4FA1D /* WListText.swift in Sources */,

@@ -47,9 +47,9 @@ public struct WListTextField: View {
     }
 }
 
-#Preview {
-    @State var text: String = ""
-    return VStack {
-        WListTextField("Email:", text: $text, isSecure: false)
-    }.padding()
-}
+//#Preview {
+//    @State var text: String = ""
+//    return VStack {
+//        WListTextField("Email:", text: $text, isSecure: false)
+//    }.padding()
+//}

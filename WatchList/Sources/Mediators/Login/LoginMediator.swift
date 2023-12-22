@@ -9,7 +9,13 @@ final public class LoginMediator {
 
 extension LoginMediator {
     func createLoginViewModel(store: AppStore) -> Login.ViewModel {
+        let loginState: LoginState = store.state.loginState
         let viewModel: Login.ViewModel = .init(
+            title: loginState.title,
+            subTitle: loginState.subTitle,
+            emailLabel: loginState.emailLabel,
+            passwordLabel: loginState.passwordLabel,
+            buttonLabel: loginState.buttonLabel,
             loginAction: {
                 store.dispatch(.login(.login))
             },

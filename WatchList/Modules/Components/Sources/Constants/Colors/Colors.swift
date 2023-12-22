@@ -8,7 +8,10 @@ enum Colors {
     var value: CGColor {
         switch self {
         case .wListPrimary:
-            return CGColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0)
+            guard let primaryColor = UIColor(named: "LaunchScreenBackgroundColor") else {
+                return CGColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0)
+            }
+            return primaryColor.cgColor
         case .wListSecondary:
             return CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
         case .wListTertiary:

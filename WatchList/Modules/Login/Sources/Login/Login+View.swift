@@ -13,19 +13,26 @@ public struct Login: View {
 
     public var body: some View {
         VStack {
-            WListTextField("Email:", text: $email, isSecure: false)
+            WListText(viewModel.title)
+                .font(.wListTitle)
+                .padding(.top, 50)
+            WListText(viewModel.subTitle)
+                .font(.wListBody)
+                .padding(.bottom)
+            WListTextField(viewModel.emailLabel, text: $email, isSecure: false)
                 .onChange(of: email) {
                     viewModel.emailChangeAction(email)
                 }
-            WListTextField("Password:", text: $password, isSecure: true)
+            WListTextField(viewModel.passwordLabel, text: $password, isSecure: true)
                 .onChange(of: password) {
                     viewModel.passwordCangeAction(password)
                 }
-            Button("Click me!") {
+            WListButton(viewModel.buttonLabel) {
                 viewModel.loginAction()
             }
         }
         .padding()
+        Spacer()
     }
 }
 
