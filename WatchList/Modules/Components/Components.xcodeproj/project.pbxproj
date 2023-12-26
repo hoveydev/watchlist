@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33432A6B2B0FC0A600FBB60A /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E2EFFC2B0B890800A4FA1D /* Components.framework */; };
 		33432A6C2B0FC0A600FBB60A /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33E2EFFC2B0B890800A4FA1D /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33457D0E2B38E18A000B17FB /* AccessibilityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33457D0D2B38E18A000B17FB /* AccessibilityLabel.swift */; };
 		33712AF42B2C8B310034F29F /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33712AF32B2C8B310034F29F /* Typealias.swift */; };
 		33712B012B2E7B370034F29F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33712B002B2E7B370034F29F /* Protocols.swift */; };
 		339C835D2B0C4FEE00DBA0CE /* WListText+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339C835C2B0C4FEE00DBA0CE /* WListText+View.swift */; };
@@ -33,7 +34,7 @@
 		33F5314A2B34677000CAC9D3 /* WListTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F531492B34677000CAC9D3 /* WListTextField.swift */; };
 		33F5314E2B346B0B00CAC9D3 /* WListTextField+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5314C2B346B0B00CAC9D3 /* WListTextField+View.swift */; };
 		33F531512B34F36C00CAC9D3 /* WListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F531502B34F36C00CAC9D3 /* WListButton.swift */; };
-		33F531572B3652D200CAC9D3 /* AccessibilityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F531562B3652D200CAC9D3 /* AccessibilityLabel.swift */; };
+		33F531572B3652D200CAC9D3 /* AccessibilityLabelBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F531562B3652D200CAC9D3 /* AccessibilityLabelBackup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		33457D0D2B38E18A000B17FB /* AccessibilityLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityLabel.swift; sourceTree = "<group>"; };
 		33712AF32B2C8B310034F29F /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		33712B002B2E7B370034F29F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		33712B0B2B2E7E8C0034F29F /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +128,7 @@
 		33F531492B34677000CAC9D3 /* WListTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WListTextField.swift; sourceTree = "<group>"; };
 		33F5314C2B346B0B00CAC9D3 /* WListTextField+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WListTextField+View.swift"; sourceTree = "<group>"; };
 		33F531502B34F36C00CAC9D3 /* WListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WListButton.swift; sourceTree = "<group>"; };
-		33F531562B3652D200CAC9D3 /* AccessibilityLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityLabel.swift; sourceTree = "<group>"; };
+		33F531562B3652D200CAC9D3 /* AccessibilityLabelBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityLabelBackup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,7 +290,8 @@
 		33F531552B36529B00CAC9D3 /* Accessibility */ = {
 			isa = PBXGroup;
 			children = (
-				33F531562B3652D200CAC9D3 /* AccessibilityLabel.swift */,
+				33F531562B3652D200CAC9D3 /* AccessibilityLabelBackup.swift */,
+				33457D0D2B38E18A000B17FB /* AccessibilityLabel.swift */,
 			);
 			path = Accessibility;
 			sourceTree = "<group>";
@@ -470,7 +473,8 @@
 			files = (
 				33E2F05C2B0C260B00A4FA1D /* FontWeight.swift in Sources */,
 				33712AF42B2C8B310034F29F /* Typealias.swift in Sources */,
-				33F531572B3652D200CAC9D3 /* AccessibilityLabel.swift in Sources */,
+				33F531572B3652D200CAC9D3 /* AccessibilityLabelBackup.swift in Sources */,
+				33457D0E2B38E18A000B17FB /* AccessibilityLabel.swift in Sources */,
 				339C83622B0CDE6D00DBA0CE /* WListNavBar.swift in Sources */,
 				33E2F04D2B0B981900A4FA1D /* WListText.swift in Sources */,
 				33E2F05F2B0C272900A4FA1D /* Font+Extension.swift in Sources */,

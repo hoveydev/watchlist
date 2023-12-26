@@ -20,6 +20,7 @@
 		3339EBE12B293CEF005C1020 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EB8F2B292E4F005C1020 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3339EBE52B293CFA005C1020 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EB8F2B292E4F005C1020 /* Login.framework */; };
 		3339EBE62B293CFA005C1020 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EB8F2B292E4F005C1020 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33457D102B38E2F1000B17FB /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33457D0F2B38E2F1000B17FB /* Accessibility.swift */; };
 		33712AE92B2A54F20034F29F /* Login+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339EBF62B295B42005C1020 /* Login+View.swift */; };
 		339B08992B33504F00F712D8 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339B08982B33504F00F712D8 /* Components.framework */; };
 		339B089A2B33504F00F712D8 /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 339B08982B33504F00F712D8 /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -117,6 +118,7 @@
 		3339EBCA2B293017005C1020 /* LoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3339EBCC2B293017005C1020 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		3339EBF62B295B42005C1020 /* Login+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+View.swift"; sourceTree = "<group>"; };
+		33457D0F2B38E2F1000B17FB /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
 		339B08982B33504F00F712D8 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33BA05712B2F44800031C84F /* Login+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +202,7 @@
 		3339EBB32B292E63005C1020 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				33457D0F2B38E2F1000B17FB /* Accessibility.swift */,
 				3339EB922B292E4F005C1020 /* Login.h */,
 				3339EBF62B295B42005C1020 /* Login+View.swift */,
 				33BA05712B2F44800031C84F /* Login+ViewModel.swift */,
@@ -419,6 +422,7 @@
 			files = (
 				33BA05722B2F44800031C84F /* Login+ViewModel.swift in Sources */,
 				33712AE92B2A54F20034F29F /* Login+View.swift in Sources */,
+				33457D102B38E2F1000B17FB /* Accessibility.swift in Sources */,
 				3339EB942B292E4F005C1020 /* Login.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
