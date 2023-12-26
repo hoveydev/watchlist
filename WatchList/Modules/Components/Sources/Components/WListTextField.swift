@@ -1,26 +1,26 @@
 import SwiftUI
 
-public struct WListTextField: View {
+public struct WListTextField<Label>: View where Label: View {
     enum Field: Hashable {
         case text
         case secure
     }
     
-    let title: String
     @Binding var text: String
     var isSecure: Bool
     @FocusState private var focusField: Field?
+    let label: () -> Label
 
-    public init(_ title: String, text: Binding<String>, isSecure: Bool) {
-        self.title = title
+    public init(text: Binding<String>, isSecure: Bool, @ViewBuilder label: @escaping () -> Label) {
         self._text = text
         self.isSecure = isSecure
+        self.label = label
     }
 
     // MARK: Body
     public var body: some View {
         VStack(alignment: .leading) {
-            WListText(title)
+            label()
                 .font(.wListBody)
                 .padding(.bottom, -5)
             isSecure ? SecureField("", text: $text)
