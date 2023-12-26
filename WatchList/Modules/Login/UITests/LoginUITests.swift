@@ -1,4 +1,5 @@
 import XCTest
+import Login
 
 final class LoginUITests: XCTestCase {
 
@@ -14,11 +15,16 @@ final class LoginUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        let emailInput = app.textFields["Email"]
-        let passwordInput = app.secureTextFields["Password"]
+        let emailInput = app.textFields[Login.A11y().emailInput]
+        let passwordInput = app.secureTextFields[Login.A11y().passwordInput]
         XCTAssertTrue(emailInput.exists)
         XCTAssertTrue(passwordInput.exists)
-        let loginButton = app.buttons["Click me!"]
+        emailInput.tap()
+        emailInput.typeText("test")
+        passwordInput.tap()
+        passwordInput.typeText("test")
+        let loginButton = app.buttons[Login.A11y().loginButton]
         XCTAssertTrue(loginButton.exists)
+        loginButton.tap()
     }
 }

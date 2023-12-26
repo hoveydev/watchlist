@@ -11,7 +11,7 @@
 		331687062B08EE1C0067F374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 331687052B08EE1C0067F374 /* Assets.xcassets */; };
 		331687092B08EE1C0067F374 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 331687082B08EE1C0067F374 /* Preview Assets.xcassets */; };
 		331687132B08EE1C0067F374 /* WatchListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331687122B08EE1C0067F374 /* WatchListTests.swift */; };
-		3316871D2B08EE1C0067F374 /* WatchListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3316871C2B08EE1C0067F374 /* WatchListUITests.swift */; };
+		3316871D2B08EE1C0067F374 /* WatchListUITests+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3316871C2B08EE1C0067F374 /* WatchListUITests+Setup.swift */; };
 		3339EBDB2B293CA7005C1020 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBAF2B292E4F005C1020 /* Login.framework */; };
 		3339EBDC2B293CA7005C1020 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBAF2B292E4F005C1020 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3339EBDD2B293CAC005C1020 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EBAF2B292E4F005C1020 /* Login.framework */; };
@@ -20,6 +20,7 @@
 		33432A712B0FC0BF00FBB60A /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		33432A732B0FC0C400FBB60A /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; };
 		33432A742B0FC0C400FBB60A /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 339C83B22B0D3D6400DBA0CE /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33457D132B3B1F2E000B17FB /* WatchListUiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33457D112B3B1EE2000B17FB /* WatchListUiTests.swift */; };
 		3367C48D2B14BE1B000869A7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3367C48C2B14BE1B000869A7 /* FirebaseAnalytics */; };
 		3367C48F2B14BE1B000869A7 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3367C48E2B14BE1B000869A7 /* FirebaseAnalyticsSwift */; };
 		3367C4912B14BE1B000869A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3367C4902B14BE1B000869A7 /* FirebaseAuth */; };
@@ -210,9 +211,10 @@
 		3316870E2B08EE1C0067F374 /* WatchListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		331687122B08EE1C0067F374 /* WatchListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTests.swift; sourceTree = "<group>"; };
 		331687182B08EE1C0067F374 /* WatchListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3316871C2B08EE1C0067F374 /* WatchListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListUITests.swift; sourceTree = "<group>"; };
+		3316871C2B08EE1C0067F374 /* WatchListUITests+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchListUITests+Setup.swift"; sourceTree = "<group>"; };
 		3339EBA92B292E4F005C1020 /* Login.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Login.xcodeproj; path = WatchList/Modules/Login/Login.xcodeproj; sourceTree = "<group>"; };
 		3339EBF42B29479E005C1020 /* Login.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Login.xctestplan; path = TestPlans/Login.xctestplan; sourceTree = "<group>"; };
+		33457D112B3B1EE2000B17FB /* WatchListUiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListUiTests.swift; sourceTree = "<group>"; };
 		3367C49C2B166E44000869A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		33712AEB2B2B565B0034F29F /* App+Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Routes.swift"; sourceTree = "<group>"; };
 		337894452B27FF3900B7EC7D /* LoginMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMediator.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		33BA056B2B2F3C220031C84F /* Login+Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Reducer.swift"; sourceTree = "<group>"; };
 		33BA056D2B2F3C460031C84F /* Login+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Action.swift"; sourceTree = "<group>"; };
 		33BA05792B30DF020031C84F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		33F531542B362BCB00CAC9D3 /* ComponentsDemo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = ComponentsDemo.xctestplan; path = TestPlans/ComponentsDemo.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,7 +330,8 @@
 		3316871B2B08EE1C0067F374 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				3316871C2B08EE1C0067F374 /* WatchListUITests.swift */,
+				3316871C2B08EE1C0067F374 /* WatchListUITests+Setup.swift */,
+				33457D112B3B1EE2000B17FB /* WatchListUiTests.swift */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -394,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				33798F862B12909C00203C90 /* Components.xctestplan */,
+				33F531542B362BCB00CAC9D3 /* ComponentsDemo.xctestplan */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -715,7 +720,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3316871D2B08EE1C0067F374 /* WatchListUITests.swift in Sources */,
+				3316871D2B08EE1C0067F374 /* WatchListUITests+Setup.swift in Sources */,
+				33457D132B3B1F2E000B17FB /* WatchListUiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
