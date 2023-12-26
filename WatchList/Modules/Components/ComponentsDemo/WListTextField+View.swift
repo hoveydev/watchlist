@@ -8,9 +8,13 @@ struct WListTextFieldView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                WListTextField("Username:", text: $textOne, isSecure: false)
+                WListTextField(text: $textOne, isSecure: false) {
+                    WListText("Username:")
+                }
                     .accessibilityLabel("UsernameTextField")
-                WListTextField("Password:", text: $textTwo, isSecure: true)
+                WListTextField(text: $textTwo, isSecure: true) {
+                    WListText("Password:")
+                }
                     .accessibilityLabel("PasswordTextField")
             }
             .padding()
