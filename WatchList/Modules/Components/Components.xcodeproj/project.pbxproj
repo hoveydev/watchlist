@@ -34,7 +34,6 @@
 		33F5314A2B34677000CAC9D3 /* WListTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F531492B34677000CAC9D3 /* WListTextField.swift */; };
 		33F5314E2B346B0B00CAC9D3 /* WListTextField+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5314C2B346B0B00CAC9D3 /* WListTextField+View.swift */; };
 		33F531512B34F36C00CAC9D3 /* WListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F531502B34F36C00CAC9D3 /* WListButton.swift */; };
-		33F531572B3652D200CAC9D3 /* AccessibilityLabelBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F531562B3652D200CAC9D3 /* AccessibilityLabelBackup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -473,7 +472,6 @@
 			files = (
 				33E2F05C2B0C260B00A4FA1D /* FontWeight.swift in Sources */,
 				33712AF42B2C8B310034F29F /* Typealias.swift in Sources */,
-				33F531572B3652D200CAC9D3 /* AccessibilityLabelBackup.swift in Sources */,
 				33457D0E2B38E18A000B17FB /* AccessibilityLabel.swift in Sources */,
 				339C83622B0CDE6D00DBA0CE /* WListNavBar.swift in Sources */,
 				33E2F04D2B0B981900A4FA1D /* WListText.swift in Sources */,

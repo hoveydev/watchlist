@@ -4,7 +4,7 @@ public protocol AppModule { }
 public protocol AppScreen { }
 public protocol AppComponent { }
 
-public class A11yLabel {
+public class A11yID {
     public var module: AppModule
     public var screen: AppScreen
     public var component: AppComponent

@@ -43,7 +43,7 @@ extension Login {
         VStack {
             WListTextField(text: $email, isSecure: false) {
                 WListText(viewModel.emailLabel)
-                    .accessibilityLabel(A11y().emailLabel)
+                    .accessibilityIdentifier(A11y().emailLabel)
             }
                 .onChange(of: email) {
                     viewModel.emailChangeAction(email)
@@ -57,7 +57,7 @@ extension Login {
     var passwordField: some View {
         WListTextField(text: $password, isSecure: true) {
             WListText(viewModel.passwordLabel)
-                .accessibilityLabel(A11y().passwordLabel)
+                .accessibilityIdentifier(A11y().passwordLabel)
         }
             .onChange(of: password) {
                 viewModel.passwordCangeAction(password)
@@ -73,19 +73,20 @@ extension Login {
         } action: {
             viewModel.loginAction()
         }
-        .accessibilityLabel(A11y().loginButton)
+        .accessibilityIdentifier(A11y().loginButton)
     }
 }
 
 extension Login {
-    private struct A11y {
-        let title: String = A11yLabel(module: Module.login, screen: Screen.login, component: Component.title).makeLabel()
-        let subtitle: String = A11yLabel(module: Module.login, screen: Screen.login, component: Component.subtitle).makeLabel()
-        let emailLabel: String = A11yLabel(module: Module.login, screen: Screen.login, component: Component.emailLabel).makeLabel()
-        let emailInput: String = A11yLabel(module: Module.login, screen: Screen.login, component: Component.emailInput).makeLabel()
-        let passwordLabel: String = A11yLabel(module: Module.login, screen: Screen.login, component: Component.passwordLabel).makeLabel()
-        let passwordInput: String = A11yLabel(module: Module.login, screen: Screen.login, component: Component.passwordInput).makeLabel()
-        let loginButton: String = A11yLabel(module: Module.login, screen: Screen.login, component: Component.loginButton).makeLabel()
+    public struct A11y {
+        public let title: String = A11yID(module: Module.login, screen: Screen.login, component: Component.title).makeLabel()
+        public let subtitle: String = A11yID(module: Module.login, screen: Screen.login, component: Component.subtitle).makeLabel()
+        public let emailLabel: String = A11yID(module: Module.login, screen: Screen.login, component: Component.emailLabel).makeLabel()
+        public let emailInput: String = A11yID(module: Module.login, screen: Screen.login, component: Component.emailInput).makeLabel()
+        public let passwordLabel: String = A11yID(module: Module.login, screen: Screen.login, component: Component.passwordLabel).makeLabel()
+        public let passwordInput: String = A11yID(module: Module.login, screen: Screen.login, component: Component.passwordInput).makeLabel()
+        public let loginButton: String = A11yID(module: Module.login, screen: Screen.login, component: Component.loginButton).makeLabel()
+        public init () { }
     }
 }
 

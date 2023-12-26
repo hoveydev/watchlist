@@ -11,11 +11,11 @@ struct WListTextFieldView: View {
                 WListTextField(text: $textOne, isSecure: false) {
                     WListText("Username:")
                 }
-                    .accessibilityLabel("UsernameTextField")
+                    .accessibilityIdentifier("UsernameTextField")
                 WListTextField(text: $textTwo, isSecure: true) {
                     WListText("Password:")
                 }
-                    .accessibilityLabel("PasswordTextField")
+                    .accessibilityIdentifier("PasswordTextField")
             }
             .padding()
             Spacer()

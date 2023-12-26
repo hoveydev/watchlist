@@ -1,3 +1,6 @@
+/// This file is currently removed from any target membership because it is currently not being used by the app
+/// We remove this membership also to exlude it from code coverage
+/// You will need to add target membership back if you would like to use this file again
 import Foundation
 
 public class AccessibilityLabelBackup {
