@@ -22,7 +22,6 @@ public class A11yID {
         let modulePrefix = "module:"
         let screenPrefix = "screen:"
         let componentPrefix = "component:"
-        print("\(modulePrefix)\(module)|\(screenPrefix)\(screen)|\(componentPrefix)\(component)")
         return "\(modulePrefix)\(module)|\(screenPrefix)\(screen)|\(componentPrefix)\(component)"
     }
 }
