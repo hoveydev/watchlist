@@ -17,7 +17,7 @@ extension LoginMediator {
             passwordLabel: loginState.passwordLabel,
             buttonLabel: loginState.buttonLabel,
             loginAction: {
-                store.dispatch(.login(.login))
+                store.dispatch(.login(.loginTap))
             },
             emailChangeAction: { value in
                 store.dispatch(.login(.enterEmail(email: value)))
@@ -29,13 +29,20 @@ extension LoginMediator {
         return viewModel
     }
     
-    func logInWithFirebase(state: AppState) {
+    func logInWithFirebase(state: AppState, completion: @escaping (Result<AppState, Error>) -> Void) {
         let loginState = state.loginState
+        var newState = state
         Auth.auth().signIn(withEmail: loginState.email, password: loginState.password) { result, error in
-            if error != nil {
-                print(error?.localizedDescription ?? "")
-            } else {
+            if let error = error {
+                print(error.localizedDescription)
+                completion(.failure(error))
+            } else if result != nil {
+                newState.isLoggedIn = true
                 print("success")
+                completion(.success(newState))
+            } else {
+                let unknownError = NSError(domain: "Mine", code: 0, userInfo: nil)
+                completion(.failure(unknownError))
             }
         }
     }

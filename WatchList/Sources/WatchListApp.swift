@@ -12,7 +12,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct WatchListApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject private var store: AppStore = AppStore(initial: AppState(), reducer: appReducer)
+    @StateObject private var store: AppStore = AppStore(initial: AppState(), reducer: appReducer, middlewares: [appMiddleware()])
     var body: some Scene {
         WindowGroup {
             AppRoutesView().environment(store)
