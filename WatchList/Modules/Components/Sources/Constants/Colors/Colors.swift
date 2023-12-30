@@ -4,6 +4,7 @@ enum Colors {
     case wListPrimary
     case wListSecondary
     case wListTertiary
+    case wListError
     
     var value: CGColor {
         switch self {
@@ -16,6 +17,8 @@ enum Colors {
             return CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
         case .wListTertiary:
             return CGColor(red: 0.1, green: 0.1, blue: 1.0, alpha: 1.0)
+        case .wListError:
+            return CGColor(red: 0.8, green: 0.1, blue: 0.1, alpha: 1.0)
         }
     }
 }

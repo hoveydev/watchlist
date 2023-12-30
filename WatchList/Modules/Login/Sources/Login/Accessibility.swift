@@ -17,4 +17,5 @@ public enum Component: String, AppComponent {
     case passwordLabel
     case passwordInput
     case loginButton
+    case errorMessage
 }

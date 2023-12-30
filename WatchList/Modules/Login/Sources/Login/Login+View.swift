@@ -55,25 +55,35 @@ extension Login {
 
 extension Login {
     var passwordField: some View {
-        WListTextField(text: $password, isSecure: true) {
-            WListText(viewModel.passwordLabel)
-                .accessibilityIdentifier(A11y().passwordLabel)
-        }
+        VStack {
+            WListTextField(text: $password, isSecure: true) {
+                WListText(viewModel.passwordLabel)
+                    .accessibilityIdentifier(A11y().passwordLabel)
+            }
             .onChange(of: password) {
                 viewModel.passwordCangeAction(password)
             }
             .accessibilityIdentifier(A11y().passwordInput)
+        }
     }
 }
 
 extension Login {
     var loginButton: some View {
-        WListButton {
-            WListText(viewModel.buttonLabel)
-        } action: {
-            viewModel.loginAction()
+        VStack {
+            WListButton {
+                WListText(viewModel.buttonLabel)
+            } action: {
+                viewModel.loginAction()
+            }
+            .padding(.bottom, .none)
+            .accessibilityIdentifier(A11y().loginButton)
+            WListText(viewModel.errorMessage)
+                .font(.wListBody)
+                .foregroundStyle(.wListError)
+                .padding(.top, .none)
+                .accessibilityIdentifier(A11y().errorMessage)
         }
-        .accessibilityIdentifier(A11y().loginButton)
     }
 }
 
@@ -86,6 +96,7 @@ extension Login {
         public let passwordLabel: String = A11yID(module: Module.login, screen: Screen.login, component: Component.passwordLabel).makeLabel()
         public let passwordInput: String = A11yID(module: Module.login, screen: Screen.login, component: Component.passwordInput).makeLabel()
         public let loginButton: String = A11yID(module: Module.login, screen: Screen.login, component: Component.loginButton).makeLabel()
+        public let errorMessage: String = A11yID(module: Module.login, screen: Screen.login, component: Component.errorMessage).makeLabel()
         public init () { }
     }
 }

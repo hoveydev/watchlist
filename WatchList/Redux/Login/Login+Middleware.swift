@@ -7,10 +7,12 @@ func loginMiddleware(state: AppState, action: LoginAction, dispatch: @escaping D
         let mediator = LoginMediator()
         mediator.logInWithFirebase(state: state) { result in
             switch result {
-            case .success(_):
+            case .success(let success):
+                print("$$$ success response: \(success)")
                 dispatch(convertAction(.loginSuccess))
-            case .failure(_):
-                dispatch(convertAction(.loginFail))
+            case .failure(let failure):
+                // print ("$$$ failure response: \(failure)")
+                dispatch(convertAction(.loginFail(error: failure.localizedDescription)))
             }
         }
     default:

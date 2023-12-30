@@ -18,7 +18,8 @@ struct LoginContentView: View {
                 },
                 passwordCangeAction: { _ in
                     print("password changed")
-                }
+                },
+                errorMessage: ""
             ))
         }
     }

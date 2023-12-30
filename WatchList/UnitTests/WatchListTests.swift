@@ -32,7 +32,7 @@ final class WatchListTests: XCTestCase {
         let store = AppStore(initial: AppState(), reducer: appReducer)
         store.dispatch(.login(.enterEmail(email: "test")))
         store.dispatch(.login(.enterPassword(password: "test")))
-        store.dispatch(.login(.login))
+        store.dispatch(.login(.loginTap))
         XCTAssertTrue(store.state.isLoggedIn)
     }
 

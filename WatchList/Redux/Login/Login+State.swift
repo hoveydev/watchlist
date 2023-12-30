@@ -11,4 +11,5 @@ public struct LoginState: ReduxState {
     var passwordLabel: String = "Password:"
     var password: String = ""
     var buttonLabel: String = "Login"
+    var errorMessage: String = ""
 }

@@ -24,7 +24,8 @@ extension LoginMediator {
             },
             passwordCangeAction: { value in
                 store.dispatch(.login(.enterPassword(password: value)))
-            }
+            },
+            errorMessage: loginState.errorMessage
         )
         return viewModel
     }

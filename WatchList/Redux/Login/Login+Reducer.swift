@@ -7,18 +7,22 @@ func loginReducer(state: inout AppState, action: LoginAction) -> Void {
         state.loginState.email = email
     case let .enterPassword(password):
         state.loginState.password = password
-    case .loginTap:
-        print("Login button was tapped") // not sure if anything should happen here
     case .loginSuccess:
         print("Login was successful!")
-        // update isLoggedIn state and nav?
-    case .loginFail:
-        print("Login failed...")
-        // update error messages state
+        state.isLoggedIn = true
+        // loading screen?
+    case let .loginFail(error):
+        print("Login failed... \(error)")
+        state.loginState.errorMessage = error
     case .register:
         state.loginState.viewStack.append(.register)
+
     // MARK: For testing ONLY
     case .testNone:
         _ = state.loginState.viewStack.popLast()
+        
+    // MARK: Default case for middleware actions
+    default:
+        return
     }
 }

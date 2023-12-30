@@ -3,7 +3,7 @@ enum LoginAction {
     case enterPassword(password: String)
     case loginTap
     case loginSuccess
-    case loginFail
+    case loginFail(error: String)
     case register
     case testNone
 }
