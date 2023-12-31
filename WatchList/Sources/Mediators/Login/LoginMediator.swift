@@ -30,7 +30,7 @@ extension LoginMediator {
         return viewModel
     }
     
-    func logInWithFirebase(state: AppState, completion: @escaping (Result<AppState, Error>) -> Void) {
+    func logInWithFirebase(state: AppState, completion: @escaping (Result<String, Error>) -> Void) {
         let loginState = state.loginState
         var newState = state
         Auth.auth().signIn(withEmail: loginState.email, password: loginState.password) { result, error in
@@ -38,9 +38,7 @@ extension LoginMediator {
                 print(error.localizedDescription)
                 completion(.failure(error))
             } else if result != nil {
-                newState.isLoggedIn = true
-                print("success")
-                completion(.success(newState))
+                completion(.success("Successful"))
             } else {
                 let unknownError = NSError(domain: "Mine", code: 0, userInfo: nil)
                 completion(.failure(unknownError))
