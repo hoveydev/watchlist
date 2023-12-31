@@ -76,12 +76,10 @@ extension Login {
             } action: {
                 viewModel.loginAction()
             }
-            .padding(.bottom, .none)
             .accessibilityIdentifier(A11y().loginButton)
             WListText(viewModel.errorMessage)
-                .font(.wListBody)
+                .font(.wListFooter)
                 .foregroundStyle(.wListError)
-                .padding(.top, .none)
                 .accessibilityIdentifier(A11y().errorMessage)
         }
     }

@@ -24,4 +24,8 @@ public extension Font {
         return customFont(.small, weight: .thin)
     }
     
+    static var wListFooter: Font {
+        return customFont(.xsmall, weight: .thin)
+    }
+    
 }
