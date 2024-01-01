@@ -34,6 +34,8 @@ final class ComponentsUITests: XCTestCase {
         XCTAssertTrue(subtitle.exists)
         let body = staticTexts["WListBody"]
         XCTAssertTrue(body.exists)
+        let footer = staticTexts["WListFooter"]
+        XCTAssertTrue(footer.exists)
     }
     
     func testWListTextFieldComponent() throws {

@@ -1,7 +1,7 @@
 import SwiftUI
 
 extension Login {
-    public class ViewModel: ObservableObject {
+    final public class ViewModel: ObservableObject {
         let title: String
         let subTitle: String
         let emailLabel: String

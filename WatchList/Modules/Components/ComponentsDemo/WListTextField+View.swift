@@ -6,7 +6,7 @@ struct WListTextFieldView: View {
     @State var textTwo: String = ""
     
     var body: some View {
-        HStack {
+        ScrollView {
             VStack(alignment: .leading) {
                 WListTextField(text: $textOne, isSecure: false) {
                     WListText("Username:")
