@@ -6,17 +6,35 @@ final class LoginUITests: XCTestCase {
     
     override func setUp() {
         app.launchArguments = []
+        app.launchEnvironment["UITEST"] = "1"
     }
     
     // screen string will change once enums are setup
-    func startApp(with screen: String) -> Void {
+    func startApp(with screen: LoginDemoApp.ScreenType) -> Void {
         setUp()
-        app.launchArguments = [screen]
+        app.launchArguments = [screen.rawValue]
         app.launch()
+    }
+    
+    func testDefaultLoginView() throws {
+        app.launch()
+        
+        let emailInput = app.textFields[Login.A11y().emailInput]
+        let emailLabel = app.staticTexts[Login.A11y().emailInput]
+        let passwordInput = app.secureTextFields[Login.A11y().passwordInput]
+        let passwordLabel = app.staticTexts[Login.A11y().passwordInput]
+        XCTAssertTrue(emailInput.exists)
+        XCTAssertTrue(emailLabel.exists)
+        XCTAssertTrue(passwordInput.exists)
+        XCTAssertTrue(passwordLabel.exists)
+        let loginButton = app.buttons[Login.A11y().loginButton]
+        let errorMessage = app.staticTexts[Login.A11y().errorMessage]
+        XCTAssertTrue(loginButton.exists)
+        XCTAssertTrue(errorMessage.exists)
     }
 
     func testBaseLoginView() throws {
-        startApp(with: "default")
+        startApp(with: .defaultLogin)
         
         let emailInput = app.textFields[Login.A11y().emailInput]
         let emailLabel = app.staticTexts[Login.A11y().emailInput]
@@ -39,7 +57,7 @@ final class LoginUITests: XCTestCase {
     }
     
     func testLoginViewWithError() throws {
-        startApp(with: "error")
+        startApp(with: .loginWithError)
         
         let emailInput = app.textFields[Login.A11y().emailInput]
         let emailLabel = app.staticTexts[Login.A11y().emailInput]

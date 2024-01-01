@@ -1,8 +1,7 @@
-import Foundation
-import Login
+import SwiftUI
 
-struct LoginViewOptions {
-    let loginBaseViewModel: Login.ViewModel =
+public extension Login.ViewModel {
+    static let loginBaseViewModel: Login.ViewModel =
         Login.ViewModel(
             title: "Test Title",
             subTitle: "Test Subtitle",
@@ -21,7 +20,7 @@ struct LoginViewOptions {
             errorMessage: ""
         )
     
-    let loginViewModelWithError: Login.ViewModel =
+    static let loginViewModelWithError: Login.ViewModel =
         Login.ViewModel(
             title: "Test Title",
             subTitle: "Test Subtitle",

@@ -32,7 +32,6 @@ extension LoginMediator {
     
     func logInWithFirebase(state: AppState, completion: @escaping (Result<String, Error>) -> Void) {
         let loginState = state.loginState
-        var newState = state
         Auth.auth().signIn(withEmail: loginState.email, password: loginState.password) { result, error in
             if let error = error {
                 print(error.localizedDescription)

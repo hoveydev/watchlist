@@ -1,38 +1,42 @@
 import SwiftUI
 import Login
 
-//class AppConfiguration {
-//    static var shared = AppConfiguration()
-//    var viewModel: Login.ViewModel?
-//    
-//    private init() {}
-//}
-
 @main
 struct LoginDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            // MARK: Change below ScreenType to change the demo app screen
             configureAppForUITests()
         }
     }
 }
 
 extension LoginDemoApp {
-    enum ScreenType {
-        static let defaultLogin = LoginViewOptions().loginBaseViewModel // could do extension on viewModel instead!
-        static let loginWithError = LoginViewOptions().loginViewModelWithError
+    enum ScreenType: String {
+        case defaultLogin
+        case loginWithError
+        
+        var viewModel: Login.ViewModel {
+            switch self {
+            case .defaultLogin:
+                return .loginBaseViewModel
+            case .loginWithError:
+                return .loginViewModelWithError
+            }
+        }
     }
 }
 
 extension LoginDemoApp {
-    private func configureAppForUITests() -> LoginContentView { // this may need to switch to any view at some point to accomodate other views in the module
-        if ProcessInfo.processInfo.arguments.contains("default") {
-            return LoginContentView(viewModel: ScreenType.defaultLogin)
-        } else if ProcessInfo.processInfo.arguments.contains("error") {
-            return LoginContentView(viewModel: ScreenType.loginWithError)
+    private func configureAppForUITests() -> LoginContentView {
+        if ProcessInfo.processInfo.environment["UITEST"] == "1" {
+            let arguments = ProcessInfo.processInfo.arguments
+            if let matchedScreenType = arguments.compactMap(ScreenType.init(rawValue:)).first {
+                return LoginContentView(viewModel: matchedScreenType.viewModel)
+            } else {
+                return LoginContentView(viewModel: ScreenType.defaultLogin.viewModel)
+            }
         } else {
-            return LoginContentView(viewModel: ScreenType.defaultLogin)
+            return LoginContentView(viewModel: .loginBaseViewModel)
         }
     }
 }
