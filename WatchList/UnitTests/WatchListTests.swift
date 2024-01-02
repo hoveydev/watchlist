@@ -28,12 +28,12 @@ final class WatchListTests: XCTestCase {
         XCTAssertEqual(store.state.loginState.viewStack.last, .register)
     }
     
-    func testAppStateUpdatesAfterLoggingIn() throws {
+    func testAppStateUpdatesAfterLoggingInBadCreds() throws {
         let store = AppStore(initial: AppState(), reducer: appReducer)
         store.dispatch(.login(.enterEmail(email: "test")))
         store.dispatch(.login(.enterPassword(password: "test")))
-        store.dispatch(.login(.login))
-        XCTAssertTrue(store.state.isLoggedIn)
+        store.dispatch(.login(.loginTap))
+        XCTAssertFalse(store.state.isLoggedIn)
     }
 
 }

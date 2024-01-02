@@ -19,4 +19,8 @@ public extension ShapeStyle where Self == Color {
     static var wListTertiary: Color {
         return customColor(.wListTertiary)
     }
+    
+    static var wListError: Color {
+        return customColor(.wListError)
+    }
 }

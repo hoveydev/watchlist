@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330DC8472B3DEF5A008821E5 /* App+Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330DC8462B3DEF5A008821E5 /* App+Middleware.swift */; };
+		330DC8492B3F32C8008821E5 /* Login+Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330DC8482B3F32C8008821E5 /* Login+Middleware.swift */; };
 		331687022B08EE1B0067F374 /* WatchListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331687012B08EE1B0067F374 /* WatchListApp.swift */; };
 		331687062B08EE1C0067F374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 331687052B08EE1C0067F374 /* Assets.xcassets */; };
 		331687092B08EE1C0067F374 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 331687082B08EE1C0067F374 /* Preview Assets.xcassets */; };
@@ -204,6 +206,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		330DC8462B3DEF5A008821E5 /* App+Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Middleware.swift"; sourceTree = "<group>"; };
+		330DC8482B3F32C8008821E5 /* Login+Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Middleware.swift"; sourceTree = "<group>"; };
 		331686FE2B08EE1B0067F374 /* WatchList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		331687012B08EE1B0067F374 /* WatchListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListApp.swift; sourceTree = "<group>"; };
 		331687052B08EE1C0067F374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -418,6 +422,7 @@
 				33BA055E2B2F3AB30031C84F /* App+Store.swift */,
 				33BA055C2B2F3A900031C84F /* App+State.swift */,
 				33BA055A2B2F3A750031C84F /* App+Reducer.swift */,
+				330DC8462B3DEF5A008821E5 /* App+Middleware.swift */,
 				33BA05582B2F3A590031C84F /* App+Action.swift */,
 				33712AEB2B2B565B0034F29F /* App+Routes.swift */,
 			);
@@ -429,6 +434,7 @@
 			children = (
 				33BA05692B2F3BCE0031C84F /* Login+State.swift */,
 				33BA056B2B2F3C220031C84F /* Login+Reducer.swift */,
+				330DC8482B3F32C8008821E5 /* Login+Middleware.swift */,
 				33BA056D2B2F3C460031C84F /* Login+Action.swift */,
 				339B088C2B323A1000F712D8 /* Login+Routes.swift */,
 			);
@@ -695,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33712AEC2B2B565B0034F29F /* App+Routes.swift in Sources */,
+				330DC8472B3DEF5A008821E5 /* App+Middleware.swift in Sources */,
 				33BA056A2B2F3BCE0031C84F /* Login+State.swift in Sources */,
 				33BA056C2B2F3C220031C84F /* Login+Reducer.swift in Sources */,
 				337894462B27FF3900B7EC7D /* LoginMediator.swift in Sources */,
@@ -704,6 +711,7 @@
 				33BA055F2B2F3AB30031C84F /* App+Store.swift in Sources */,
 				33BA055B2B2F3A750031C84F /* App+Reducer.swift in Sources */,
 				339B088D2B323A1000F712D8 /* Login+Routes.swift in Sources */,
+				330DC8492B3F32C8008821E5 /* Login+Middleware.swift in Sources */,
 				33BA05592B2F3A590031C84F /* App+Action.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
