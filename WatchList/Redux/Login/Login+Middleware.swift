@@ -10,7 +10,6 @@ func loginMiddleware(state: AppState, action: LoginAction, dispatch: @escaping D
             case .success(_):
                 dispatch(convertAction(.loginSuccess))
             case .failure(let failure):
-                // print ("$$$ failure response: \(failure)")
                 dispatch(convertAction(.loginFail(error: failure.localizedDescription)))
             }
         }
