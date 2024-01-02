@@ -11,6 +11,9 @@ struct LoginDemoApp: App {
 }
 
 extension LoginDemoApp {
+    // MARK: Change below screen for demo app
+    static let DemoAppScreen: LoginContentView = .init(viewModel: .loginBaseViewModel)
+    
     enum ScreenType: String {
         case defaultLogin
         case loginWithError
@@ -36,7 +39,7 @@ extension LoginDemoApp {
                 return LoginContentView(viewModel: ScreenType.defaultLogin.viewModel)
             }
         } else {
-            return LoginContentView(viewModel: .loginBaseViewModel)
+            return LoginDemoApp.DemoAppScreen
         }
     }
 }
