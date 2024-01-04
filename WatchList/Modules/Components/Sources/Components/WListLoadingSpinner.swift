@@ -1,14 +1,15 @@
 import SwiftUI
 
-public struct WListLoadingSpinner: View {
-    @State private var isSpinningClockwise1: Bool = true
-    @State private var isSpinningClockwise2: Bool = true
-    @State private var isSpinningClockwise3: Bool = true
-    @State private var isSpinningClockwise4: Bool = true
+public struct WListLoadingSpinner<Text>: View where Text: View {
+    @State private var rotationAngle1: Double = 0
+    @State private var rotationAngle2: Double = 0
+    @State private var rotationAngle3: Double = 0
+    @State private var rotationAngle4: Double = 0
+    let rotationIncrement: Double = 360.0
     
-    let text: String
+    let text: () -> Text
     
-    public init(text: String) {
+    public init(text: @escaping () -> Text) {
         self.text = text
     }
     
@@ -19,50 +20,64 @@ public struct WListLoadingSpinner: View {
                     .trim(from: 0, to: 0.25)
                     .stroke(.wListPrimary, lineWidth: 3)
                     .frame(width: 50, height: 50, alignment: .center)
-                    .rotationEffect(Angle(degrees: isSpinningClockwise1 ? 0 : 360))
+                    .rotationEffect(Angle(degrees: rotationAngle1))
                     .onAppear() {
-                        withAnimation(Animation.linear(duration: 1.0).repeatForever(autoreverses: false)) {
-                            isSpinningClockwise1.toggle()
+                        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+                            withAnimation(.linear(duration: 1.0)) {
+                                rotationAngle1 += rotationIncrement
+                            }
                         }
                     }
+                    .accessibilityAddTraits(.isImage)
                 Circle()
                     .trim(from: 0.5, to: 0.75)
                     .stroke(.wListPrimary, lineWidth: 3)
                     .frame(width: 50, height: 50, alignment: .center)
-                    .rotationEffect(Angle(degrees: isSpinningClockwise2 ? 0 : 360))
+                    .rotationEffect(Angle(degrees: rotationAngle2))
                     .onAppear() {
-                        withAnimation(Animation.linear(duration: 1.0).repeatForever(autoreverses: false)) {
-                            isSpinningClockwise2.toggle()
+                        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+                            withAnimation(.linear(duration: 1.0)) {
+                                rotationAngle2 += rotationIncrement
+                            }
                         }
                     }
+                    .accessibilityAddTraits(.isImage)
                 Circle()
                     .trim(from: 0, to: 0.25)
                     .stroke(.wListPrimary, lineWidth: 2)
                     .frame(width: 35, height: 35, alignment: .center)
-                    .rotationEffect(Angle(degrees: isSpinningClockwise3 ? 0 : 360))
+                    .rotationEffect(Angle(degrees: rotationAngle3))
                     .onAppear() {
-                        withAnimation(Animation.linear(duration: 0.9).repeatForever(autoreverses: false)) {
-                            isSpinningClockwise3.toggle()
+                        Timer.scheduledTimer(withTimeInterval: 0.9, repeats: true) { _ in
+                            withAnimation(.linear(duration: 0.9)) {
+                                rotationAngle3 += rotationIncrement
+                            }
                         }
                     }
+                    .accessibilityAddTraits(.isImage)
                 Circle()
                     .trim(from: 0.5, to: 0.75)
                     .stroke(.wListPrimary, lineWidth: 2)
                     .frame(width: 35, height: 35, alignment: .center)
-                    .rotationEffect(Angle(degrees: isSpinningClockwise4 ? 0 : 360))
+                    .rotationEffect(Angle(degrees: rotationAngle4))
                     .onAppear() {
-                        withAnimation(Animation.linear(duration: 0.9).repeatForever(autoreverses: false)) {
-                            isSpinningClockwise4.toggle()
+                        Timer.scheduledTimer(withTimeInterval: 0.9, repeats: true) { _ in
+                            withAnimation(.linear(duration: 0.9)) {
+                                rotationAngle4 += rotationIncrement
+                            }
                         }
                     }
+                    .accessibilityAddTraits(.isImage)
             }
-            WListText(text)
+            text()
                 .font(.wListBody)
                 .foregroundStyle(.wListPrimary)
         }
     }
 }
 
-#Preview {
-    WListLoadingSpinner(text: "loading...")
-}
+//#Preview {
+//    WListLoadingSpinner {
+//        WListText("loading...")
+//    }
+//}

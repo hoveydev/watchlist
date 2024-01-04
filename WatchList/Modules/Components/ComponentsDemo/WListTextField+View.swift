@@ -20,7 +20,7 @@ struct WListTextFieldView: View {
             .padding()
             Spacer()
         }
-        .padding()
+        .padding(.horizontal)
         .wListNavBar("WListTextField", placement: .principal, isMain: false)
         Spacer()
     }

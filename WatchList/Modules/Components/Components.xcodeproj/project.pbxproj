@@ -32,6 +32,7 @@
 		33E2F0622B0C3BF200A4FA1D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E2F0612B0C3BF200A4FA1D /* Colors.swift */; };
 		33E2F0642B0C3CF500A4FA1D /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E2F0632B0C3CF500A4FA1D /* Color+Extension.swift */; };
 		33F1DF022B44AE1F005E7D5E /* WListLoadingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1DF012B44AE1F005E7D5E /* WListLoadingSpinner.swift */; };
+		33F1DF042B4502E3005E7D5E /* WListLoadingSpinner+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1DF032B4502E3005E7D5E /* WListLoadingSpinner+View.swift */; };
 		33F5314A2B34677000CAC9D3 /* WListTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F531492B34677000CAC9D3 /* WListTextField.swift */; };
 		33F5314E2B346B0B00CAC9D3 /* WListTextField+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5314C2B346B0B00CAC9D3 /* WListTextField+View.swift */; };
 		33F531512B34F36C00CAC9D3 /* WListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F531502B34F36C00CAC9D3 /* WListButton.swift */; };
@@ -126,6 +127,7 @@
 		33E2F0612B0C3BF200A4FA1D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		33E2F0632B0C3CF500A4FA1D /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		33F1DF012B44AE1F005E7D5E /* WListLoadingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WListLoadingSpinner.swift; sourceTree = "<group>"; };
+		33F1DF032B4502E3005E7D5E /* WListLoadingSpinner+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WListLoadingSpinner+View.swift"; sourceTree = "<group>"; };
 		33F531492B34677000CAC9D3 /* WListTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WListTextField.swift; sourceTree = "<group>"; };
 		33F5314C2B346B0B00CAC9D3 /* WListTextField+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WListTextField+View.swift"; sourceTree = "<group>"; };
 		33F531502B34F36C00CAC9D3 /* WListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WListButton.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				33E2F0402B0B904200A4FA1D /* ComponentsContentView.swift */,
 				339C835C2B0C4FEE00DBA0CE /* WListText+View.swift */,
 				33F5314C2B346B0B00CAC9D3 /* WListTextField+View.swift */,
+				33F1DF032B4502E3005E7D5E /* WListLoadingSpinner+View.swift */,
 				33E2F0422B0B904300A4FA1D /* Assets.xcassets */,
 				33E2F0442B0B904300A4FA1D /* Preview Content */,
 			);
@@ -513,6 +516,7 @@
 				33F5314E2B346B0B00CAC9D3 /* WListTextField+View.swift in Sources */,
 				33E2F0412B0B904200A4FA1D /* ComponentsContentView.swift in Sources */,
 				339C835D2B0C4FEE00DBA0CE /* WListText+View.swift in Sources */,
+				33F1DF042B4502E3005E7D5E /* WListLoadingSpinner+View.swift in Sources */,
 				33E2F03F2B0B904200A4FA1D /* ComponentsDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

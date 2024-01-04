@@ -56,4 +56,20 @@ final class ComponentsUITests: XCTestCase {
         let passwordField = secureFields["PasswordTextField"]
         XCTAssertTrue(passwordField.exists)
     }
+    
+    func testWListLoadingSpinnerComponent() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let WListLoadingSpinnerButton = app.buttons["WListLoadingSpinner"]
+        XCTAssertTrue(WListLoadingSpinnerButton.exists)
+        WListLoadingSpinnerButton.tap()
+        let staticTexts = app.staticTexts
+        XCTAssertEqual(staticTexts.count, 1)
+        let spinnerText = staticTexts["WListLoadingSpinner"]
+        XCTAssertTrue(spinnerText.exists)
+        XCTAssertEqual(spinnerText.label, "loading...")
+        let spinnerPart = app.images
+        XCTAssertEqual(spinnerPart.count, 4)
+    }
 }
