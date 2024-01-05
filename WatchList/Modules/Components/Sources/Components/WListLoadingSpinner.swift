@@ -1,10 +1,10 @@
 import SwiftUI
 
 public struct WListLoadingSpinner<Text>: View where Text: View {
-    @State private var rotationAngle1: Double = 0
-    @State private var rotationAngle2: Double = 0
-    @State private var rotationAngle3: Double = 0
-    @State private var rotationAngle4: Double = 0
+    @State var rotationAngle1: Double = 0
+    @State var rotationAngle2: Double = 0
+    @State var rotationAngle3: Double = 0
+    @State var rotationAngle4: Double = 0
     let rotationIncrement: Double = 360.0
     
     let text: () -> Text

@@ -17,7 +17,7 @@ final class ComponentsUITests: XCTestCase {
         let header = app.staticTexts["Components"]
         XCTAssertTrue(header.exists)
         let componentListItems = app.buttons
-        XCTAssertEqual(componentListItems.count, 2)
+        XCTAssertEqual(componentListItems.count, 3)
     }
     
     func testWListTextComponent() throws {
@@ -65,11 +65,14 @@ final class ComponentsUITests: XCTestCase {
         XCTAssertTrue(WListLoadingSpinnerButton.exists)
         WListLoadingSpinnerButton.tap()
         let staticTexts = app.staticTexts
-        XCTAssertEqual(staticTexts.count, 1)
+        XCTAssertEqual(staticTexts.count, 2)
         let spinnerText = staticTexts["WListLoadingSpinner"]
         XCTAssertTrue(spinnerText.exists)
         XCTAssertEqual(spinnerText.label, "loading...")
         let spinnerPart = app.images
+        XCTAssertEqual(spinnerPart.count, 4)
+        sleep(2)
+        // making sure they still exist is enough to cover the rotation
         XCTAssertEqual(spinnerPart.count, 4)
     }
 }
