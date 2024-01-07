@@ -34,7 +34,6 @@ extension LoginMediator {
         let loginState = state.loginState
         Auth.auth().signIn(withEmail: loginState.email, password: loginState.password) { result, error in
             if let error = error {
-                print(error.localizedDescription)
                 completion(.failure(error))
             } else if result != nil {
                 completion(.success("Successful"))

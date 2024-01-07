@@ -8,9 +8,13 @@ func loginMiddleware(state: AppState, action: LoginAction, dispatch: @escaping D
         mediator.logInWithFirebase(state: state) { result in
             switch result {
             case .success(_):
-                dispatch(convertAction(.loginSuccess))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    dispatch(convertAction(.loginSuccess))
+                }
             case .failure(let failure):
-                dispatch(convertAction(.loginFail(error: failure.localizedDescription)))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    dispatch(convertAction(.loginFail(error: failure.localizedDescription)))
+                }
             }
         }
     default:
