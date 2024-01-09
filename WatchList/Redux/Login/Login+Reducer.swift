@@ -11,9 +11,7 @@ func loginReducer(state: inout AppState, action: LoginAction) -> Void {
         state.loginState.password = password
         
     case .loginTap:
-        withAnimation {
-            state.loginState.viewStack.append(.loading)
-        }
+        state.loginState.viewStack.append(.loading)
 
     case .loginSuccess:
         _ = state.loginState.viewStack.popLast()

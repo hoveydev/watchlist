@@ -20,7 +20,9 @@ struct LoginRoutesView: View {
             // this view is for loading
             WListLoadingSpinner {
                 WListText("loading...")
-            }.transition(.slide)
+            }.transition(.move(edge: .bottom))
+            //.transition(.move(edge: .bottom))
+            // .animation(Animation.spring(duration: 1.0), value: UUID())
             // ideally this will be in a separate View with VeiewModel
             // in order to have valid a11y ids
         case .register:
@@ -28,5 +30,5 @@ struct LoginRoutesView: View {
         case .none:
             EmptyView()
         }
-     }
+    }
 }

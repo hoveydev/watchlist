@@ -12,14 +12,16 @@ public struct Login: View {
     }
 
     public var body: some View {
-        VStack {
-            header
-            emailField
-            passwordField
-            loginButton
+        WListBaseView(backgroundColor: Color.white) {
+            VStack {
+                header
+                emailField
+                passwordField
+                loginButton
+                Spacer()
+            }
+            .padding(.horizontal)
         }
-        .padding()
-        Spacer()
     }
 }
 

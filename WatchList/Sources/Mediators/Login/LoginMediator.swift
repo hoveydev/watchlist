@@ -17,7 +17,9 @@ extension LoginMediator {
             passwordLabel: loginState.passwordLabel,
             buttonLabel: loginState.buttonLabel,
             loginAction: {
-                store.dispatch(.login(.loginTap))
+                withAnimation {
+                    store.dispatch(.login(.loginTap))
+                }
             },
             emailChangeAction: { value in
                 store.dispatch(.login(.enterEmail(email: value)))
