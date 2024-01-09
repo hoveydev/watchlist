@@ -10,13 +10,11 @@ enum AppRoutes: Hashable {
 struct AppRoutesView: View {
     @EnvironmentObject var store: AppStore
     var body: some View {
-        NavigationStack {
-            switch store.state.viewStack.last {
-            case .login:
-                LoginRoutesView().environment(store)
-            case .none:
-                EmptyView()
-            }
+        switch store.state.viewStack.last {
+        case .login:
+            LoginRoutesView().environment(store)
+        case .none:
+            EmptyView()
         }
     }
 }

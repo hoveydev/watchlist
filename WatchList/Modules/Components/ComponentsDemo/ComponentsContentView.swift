@@ -8,6 +8,7 @@ struct ComponentContentView: View {
                 List {
                     NavigationLink("WListText", destination: WListTextView())
                     NavigationLink("WListTextField", destination: WListTextFieldView())
+                    NavigationLink("WListLoadingSpinner", destination: WListLoadingSpinnerView())
                 }
             }
             .wListNavBar("Components", placement: .topBarLeading, isMain: true)

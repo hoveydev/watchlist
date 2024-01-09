@@ -10,7 +10,7 @@ final class LoginUITests: XCTestCase {
     }
     
     // screen string will change once enums are setup
-    func startApp(with screen: LoginDemoApp.ScreenType) -> Void {
+    func startApp(with screen: Login.ViewModel.ScreenType) -> Void {
         setUp()
         app.launchArguments = [screen.rawValue]
         app.launch()

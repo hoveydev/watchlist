@@ -1,5 +1,6 @@
 import Combine
 import Login
+import SwiftUI
 
 func loginMiddleware(state: AppState, action: LoginAction, dispatch: @escaping Dispatcher<AppAction>) -> Void {
     switch action {
@@ -8,9 +9,17 @@ func loginMiddleware(state: AppState, action: LoginAction, dispatch: @escaping D
         mediator.logInWithFirebase(state: state) { result in
             switch result {
             case .success(_):
-                dispatch(convertAction(.loginSuccess))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    withAnimation {
+                        dispatch(convertAction(.loginSuccess))
+                    }
+                }
             case .failure(let failure):
-                dispatch(convertAction(.loginFail(error: failure.localizedDescription)))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    withAnimation {
+                        dispatch(convertAction(.loginFail(error: failure.localizedDescription)))
+                    }
+                }
             }
         }
     default:

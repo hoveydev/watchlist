@@ -1,6 +1,20 @@
 import SwiftUI
 
 public extension Login.ViewModel {
+    enum ScreenType: String {
+        case defaultLogin
+        case loginWithError
+        
+        public var viewModel: Login.ViewModel {
+            switch self {
+            case .defaultLogin:
+                return .loginBaseViewModel
+            case .loginWithError:
+                return .loginViewModelWithError
+            }
+        }
+    }
+
     static let loginBaseViewModel: Login.ViewModel =
         Login.ViewModel(
             title: "Test Title",

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		330DC85B2B4357CD008821E5 /* Login.ViewModel+Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330DC85A2B4357CD008821E5 /* Login.ViewModel+Configs.swift */; };
-		330DC8612B43660A008821E5 /* LoginDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339EBBA2B292FE4005C1020 /* LoginDemoApp.swift */; };
-		330DC8622B436646008821E5 /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339EBBC2B292FE4005C1020 /* LoginContentView.swift */; };
 		3339EB942B292E4F005C1020 /* Login.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3339EB932B292E4F005C1020 /* Login.docc */; };
 		3339EB9A2B292E4F005C1020 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3339EB8F2B292E4F005C1020 /* Login.framework */; };
 		3339EB9F2B292E4F005C1020 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339EB9E2B292E4F005C1020 /* LoginTests.swift */; };
@@ -427,8 +425,6 @@
 			files = (
 				33BA05722B2F44800031C84F /* Login+ViewModel.swift in Sources */,
 				33712AE92B2A54F20034F29F /* Login+View.swift in Sources */,
-				330DC8622B436646008821E5 /* LoginContentView.swift in Sources */,
-				330DC8612B43660A008821E5 /* LoginDemoApp.swift in Sources */,
 				33457D102B38E2F1000B17FB /* Accessibility.swift in Sources */,
 				3339EB942B292E4F005C1020 /* Login.docc in Sources */,
 				330DC85B2B4357CD008821E5 /* Login.ViewModel+Configs.swift in Sources */,

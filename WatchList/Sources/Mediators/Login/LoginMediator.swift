@@ -17,7 +17,9 @@ extension LoginMediator {
             passwordLabel: loginState.passwordLabel,
             buttonLabel: loginState.buttonLabel,
             loginAction: {
-                store.dispatch(.login(.loginTap))
+                withAnimation {
+                    store.dispatch(.login(.loginTap))
+                }
             },
             emailChangeAction: { value in
                 store.dispatch(.login(.enterEmail(email: value)))
@@ -34,7 +36,6 @@ extension LoginMediator {
         let loginState = state.loginState
         Auth.auth().signIn(withEmail: loginState.email, password: loginState.password) { result, error in
             if let error = error {
-                print(error.localizedDescription)
                 completion(.failure(error))
             } else if result != nil {
                 completion(.success("Successful"))

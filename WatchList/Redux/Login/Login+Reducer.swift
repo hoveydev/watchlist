@@ -9,13 +9,17 @@ func loginReducer(state: inout AppState, action: LoginAction) -> Void {
 
     case let .enterPassword(password):
         state.loginState.password = password
+        
+    case .loginTap:
+        state.loginState.viewStack.append(.loading)
 
     case .loginSuccess:
+        _ = state.loginState.viewStack.popLast()
         state.loginState.errorMessage = ""
         state.isLoggedIn = true
-        // loading screen?
 
     case let .loginFail(error):
+        _ = state.loginState.viewStack.popLast()
         state.loginState.errorMessage = error
 
     case .register:
@@ -25,8 +29,8 @@ func loginReducer(state: inout AppState, action: LoginAction) -> Void {
     case .testNone:
         _ = state.loginState.viewStack.popLast()
         
-    // MARK: Default case for middleware actions
-    default:
-        return
+    // MARK: Default case for unused actions
+//    default:
+//        return
     }
 }
